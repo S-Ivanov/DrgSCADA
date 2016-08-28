@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatorCO2", "SimulatorCO2\SimulatorCO2.csproj", "{08012CC0-0FE3-4485-8F15-0B03B45E7EEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvgVisioPack", "SvgVisioPack\SvgVisioPack.csproj", "{C55BFE09-2D86-40F4-932B-D5C3D43CFD46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{08012CC0-0FE3-4485-8F15-0B03B45E7EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08012CC0-0FE3-4485-8F15-0B03B45E7EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08012CC0-0FE3-4485-8F15-0B03B45E7EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55BFE09-2D86-40F4-932B-D5C3D43CFD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55BFE09-2D86-40F4-932B-D5C3D43CFD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55BFE09-2D86-40F4-932B-D5C3D43CFD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55BFE09-2D86-40F4-932B-D5C3D43CFD46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
