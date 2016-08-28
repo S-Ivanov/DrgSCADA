@@ -1,0 +1,3033 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Имитатор установки по производству жидкой углекислоты</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+        <!-- JQuery CSS -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/redmond/jquery-ui.css" type="text/css" />
+        <!-- jqGrid CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/css/ui.jqgrid.css" type="text/css" >
+
+        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/js/jquery.jqGrid.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/js/i18n/grid.locale-ru.js"></script>
+    </head>
+<body>
+    <style>
+        .ui-jqgrid tr.jqgrow td
+        {
+            height: 10px;
+            padding: 0 0 0 0;
+            font-size: 9px;
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <span class="brand" >Имитатор установки по производству жидкой углекислоты</span>
+        </div>
+
+        <div id="tableView" style="background-color: white; position: absolute; left: 190px; top: 76px; width: 708px; height: 292px" data-bind="visible: tableViewVisible">
+            <table id="tableViewGrid" class="scroll" style="font-size: 10px"><tr><td></td></tr></table>
+            <div id="tableViewPager" class="scroll" ></div>
+        </div>
+    </div>
+    <div id="main" >
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="9.47576in" height="7.11356in" viewBox="0 0 682.255 512.176" xml:space="preserve" color-interpolation-filters="sRGB" class="st39">
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#cdcdcd;fill-opacity:0.5;stroke:#cdcdcd;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.5;stroke-width:0.25}
+		.st3 {fill:url(#grad30-8);stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st4 {fill:url(#grad29-14);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st5 {fill:url(#grad29-14);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st7 {fill:#e8eef7;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st8 {fill:#ffff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st9 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st10 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st11 {fill:#ff0000;font-family:Calibri;font-size:0.666664em}
+		.st12 {fill:#ffffff;font-family:Calibri;font-size:0.666664em}
+		.st13 {font-size:1em}
+		.st14 {font-family:Calibri;font-size:1.99999em;font-weight:bold}
+		.st15 {fill:#ffff00;font-family:Calibri;font-size:0.666664em}
+		.st16 {fill:url(#grad30-199);stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st17 {stroke:#cdcdcd;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.5;stroke-width:0.25}
+		.st18 {stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st19 {fill:url(#grad30-234);stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st20 {fill:url(#grad30-267);stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st21 {fill:url(#grad30-267);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st22 {fill:#d8d8d8;stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st23 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
+		.st24 {baseline-shift:-32.4947%;font-size:0.649894em}
+		.st25 {fill:url(#grad30-1384);stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st26 {fill:#000000;font-family:Calibri;font-size:1.00001em}
+		.st27 {font-size:0.749994em}
+		.st28 {baseline-shift:-24.3712%;font-size:0.487423em}
+		.st29 {baseline-shift:24.3712%;font-size:0.487423em}
+		.st30 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st31 {font-size:1em;text-decoration:underline}
+		.st32 {fill:#cdcdcd;fill-opacity:0.5;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st33 {fill:url(#grad30-8);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st34 {font-size:0.916665em}
+		.st35 {fill:#000000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st36 {fill:#ffffff;font-family:Calibri;font-size:1.00001em}
+		.st37 {fill:#000000;font-family:Calibri;font-size:0.916672em}
+		.st38 {fill:url(#grad30-1925);stroke:#404040;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st39 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+		.st40 {font-size:0.749994em;text-decoration:underline}
+		.st42 {fill:#000000;font-family:Calibri;font-size:0.749994em}
+
+   		.st104 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st105 {fill:#000000;font-family:Calibri;font-size:0.666664em;font-style:italic;font-weight:bold}
+
+	]]>
+	</style>
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad30-8" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#f0f0f0;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#ffffff;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="grad29-14" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0" style="stop-color:#8db1e2;stop-opacity:1" />
+			<stop offset="0.5" style="stop-color:#b7c9e3;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#8db1e2;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="grad30-199" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#85ca39;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#92d050;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="grad30-234" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#e10000;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#ff0000;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="grad30-267" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#c9c9c9;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#d8d8d8;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="grad30-1384" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#d3dcba;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#e0e6cd;stop-opacity:1" />
+		</linearGradient>
+		<linearGradient id="grad30-1925" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#000000;stop-opacity:1" />
+			<stop offset="1" style="stop-color:#000000;stop-opacity:1" />
+		</linearGradient>
+
+		<linearGradient id="grad30-6" v:fillPattern="30" v:foreground="#000000" v:background="#000000" x1="0" y1="1" x2="0" y2="0">
+			<stop offset="0" style="stop-color:#000000;stop-opacity:1"/>
+			<stop offset="1" style="stop-color:#000000;stop-opacity:1"/>
+		</linearGradient>
+	</defs>
+	<g>
+		<g id="group631-1" transform="translate(0.25,-1.69)">
+			<g id="group613-2">
+				<g id="shape1-3">
+					<g id="shadow1-4" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<rect x="0" y="1.94" width="680.315" height="510.236" class="st2" />
+					</g>
+					<rect x="0" y="1.94" width="680.315" height="510.236" class="st3" />
+				</g>
+				<g id="group4-9" transform="translate(145.984,-120.472)">
+					<g id="group5-10">
+						<g id="shape6-11">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape7-15" transform="translate(86.3892,0)">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape8-18" transform="translate(13.4983,-1.13687E-013)">
+							<rect x="0" y="425.72" width="86.3892" height="86.4567" class="st5" />
+						</g>
+						<g id="shape9-21" transform="translate(13.4983,-86.4567)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+						<g id="shape47-25" transform="translate(13.4983,4.54747E-013)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+					</g>
+					<g id="shape48-29" transform="translate(55.2756,-2.88189)">
+						<rect x="0" y="431.483" width="2.83465" height="80.6929" class="st7" />
+					</g>
+					<g id="shape49-31" transform="translate(55.2756,-2.88189)">
+						<title>Уровень в хранилище</title>
+						<desc>B уровень</desc>
+                        <rect x="0" width="2.83465" class="st8"
+                              data-bind="attr:
+                                {
+                                    y: 472.089 + 40.0871 - 80.6929 * model.tanks[1].balancePercent() / 100,
+                                    height: 80.6929 * model.tanks[1].balancePercent() / 100
+                                }" />
+					</g>
+					<g id="group50-33" transform="translate(68.0315,-30.9803)">
+						<g id="shape51-34">
+							<path d="M0 496.87 L0 487.68 L12.76 487.68 L17.01 487.68 L21.26 487.68 L34.02 487.68 L34.02 496.87 L34.02&#xD;&#xA;										 499.93 L34.02 502.99 L34.02 512.18 L21.26 512.18 L17.01 512.18 L12.76 512.18 L0 512.18 L0&#xD;&#xA;										 502.99 L-9.92 492.64 L0 496.87 Z" class="st9" />
+						</g>
+						<g id="shape52-36" transform="translate(4.19664E-014,-11.2005)">
+							<desc>B процент</desc>
+							<rect x="0" y="498.881" width="34.0157" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[1].balancePercent() + ' %', css: getBalanceCSS(1)" />						</g>
+						<g id="shape53-39">
+							<desc>B тонн</desc>
+							<rect x="0" y="498.881" width="32.5984" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[1].balance().toFixed(2) + ' т', css: getBalanceCSS(1)" />						</g>
+					</g>
+					<g id="shape54-43" transform="translate(21.2598,-36.0236)">
+						<desc>B</desc>
+						<rect x="0" y="495.91" width="21.2238" height="16.2667" class="st10" />
+						<text x="4" y="511.24" class="st14" fill="#ffff00">B</text>					</g>
+				</g>
+				<g id="group3-46" transform="translate(280.63,-120.472)">
+					<g id="group10-47">
+						<g id="shape11-48">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape12-51" transform="translate(86.3892,0)">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape13-54" transform="translate(13.4983,-1.13687E-013)">
+							<rect x="0" y="425.72" width="86.3892" height="86.4567" class="st5" />
+						</g>
+						<g id="shape14-57" transform="translate(13.4983,-86.4567)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+						<g id="shape15-61" transform="translate(13.4983,4.54747E-013)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+					</g>
+					<g id="shape16-65" transform="translate(55.2756,-2.88189)">
+						<rect x="0" y="431.483" width="2.83465" height="80.6929" class="st7" />
+					</g>
+					<g id="shape17-67" transform="translate(55.2756,-2.88189)">
+						<title>Уровень в хранилище</title>
+						<desc>C уровень</desc>
+                        <rect x="0" width="2.83465" class="st8"
+                              data-bind="attr:
+                                {
+                                    y: 472.089 + 40.0871 - 80.6929 * model.tanks[2].balancePercent() / 100,
+                                    height: 80.6929 * model.tanks[2].balancePercent() / 100
+                                }" />
+					</g>
+					<g id="group18-69" transform="translate(68.0315,-30.9803)">
+						<g id="shape19-70">
+							<path d="M0 496.87 L0 487.68 L12.76 487.68 L17.01 487.68 L21.26 487.68 L34.02 487.68 L34.02 496.87 L34.02&#xD;&#xA;										 499.93 L34.02 502.99 L34.02 512.18 L21.26 512.18 L17.01 512.18 L12.76 512.18 L0 512.18 L0&#xD;&#xA;										 502.99 L-9.92 492.64 L0 496.87 Z" class="st9" />
+						</g>
+						<g id="shape20-72" transform="translate(4.19664E-014,-11.2005)">
+							<desc>C процент</desc>
+							<rect x="0" y="498.881" width="34.0157" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[2].balancePercent() + ' %', css: getBalanceCSS(2)" />						</g>
+						<g id="shape55-75">
+							<desc>C тонн</desc>
+							<rect x="0" y="498.881" width="32.5984" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[2].balance().toFixed(2) + ' т', css: getBalanceCSS(2)" />							
+                        </g>
+					</g>
+					<g id="shape56-79" transform="translate(21.2598,-36.0236)">
+						<desc>C</desc>
+						<rect x="0" y="495.91" width="21.2238" height="16.2667" class="st10" />
+						<text x="4.26" y="511.24" class="st14" fill="#00b050">C</text>					</g>
+				</g>
+				<g id="group21-82" transform="translate(415.276,-120.472)">
+					<g id="group22-83">
+						<g id="shape23-84">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape24-87" transform="translate(86.3892,0)">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape25-90" transform="translate(13.4983,-1.13687E-013)">
+							<rect x="0" y="425.72" width="86.3892" height="86.4567" class="st5" />
+						</g>
+						<g id="shape26-93" transform="translate(13.4983,-86.4567)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+						<g id="shape57-97" transform="translate(13.4983,4.54747E-013)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+					</g>
+					<g id="shape58-101" transform="translate(55.2756,-2.88189)">
+						<rect x="0" y="431.483" width="2.83465" height="80.6929" class="st7" />
+					</g>
+					<g id="shape59-103" transform="translate(55.2756,-2.88189)">
+						<title>Уровень в хранилище</title>
+						<desc>D уровень</desc>
+                        <rect x="0" width="2.83465" class="st8"
+                              data-bind="attr:
+                                {
+                                    y: 472.089 + 40.0871 - 80.6929 * model.tanks[3].balancePercent() / 100,
+                                    height: 80.6929 * model.tanks[3].balancePercent() / 100
+                                }" />
+					</g>
+					<g id="group60-105" transform="translate(68.0315,-30.9803)">
+						<g id="shape61-106">
+							<path d="M0 496.87 L0 487.68 L12.76 487.68 L17.01 487.68 L21.26 487.68 L34.02 487.68 L34.02 496.87 L34.02&#xD;&#xA;										 499.93 L34.02 502.99 L34.02 512.18 L21.26 512.18 L17.01 512.18 L12.76 512.18 L0 512.18 L0&#xD;&#xA;										 502.99 L-9.92 492.64 L0 496.87 Z" class="st9" />
+						</g>
+						<g id="shape62-108" transform="translate(4.19664E-014,-11.2005)">
+							<desc>D процент</desc>
+							<rect x="0" y="498.881" width="34.0157" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[3].balancePercent() + ' %', css: getBalanceCSS(3)" />						</g>
+						<g id="shape63-111">
+							<desc>D тонн</desc>
+							<rect x="0" y="498.881" width="32.5984" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[3].balance().toFixed(2) + ' т', css: getBalanceCSS(3)" />						</g>
+					</g>
+					<g id="shape64-115" transform="translate(21.2598,-36.0236)">
+						<desc>D</desc>
+						<rect x="0" y="495.91" width="21.2238" height="16.2667" class="st10" />
+						<text x="4" y="511.24" class="st14" fill="#00b0f0" >D</text>					</g>
+				</g>
+				<g id="group27-118" transform="translate(549.921,-120.472)">
+					<g id="group28-119">
+						<g id="shape29-120">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape30-123" transform="translate(86.3892,0)">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 -0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape31-126" transform="translate(13.4983,-1.13687E-013)">
+							<rect x="0" y="425.72" width="86.3892" height="86.4567" class="st5" />
+						</g>
+						<g id="shape32-129" transform="translate(13.4983,-86.4567)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+						<g id="shape65-133" transform="translate(13.4983,4.54747E-013)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+					</g>
+					<g id="shape66-137" transform="translate(55.2756,-2.88189)">
+						<rect x="0" y="431.483" width="2.83465" height="80.6929" class="st7" />
+					</g>
+					<g id="shape67-139" transform="translate(55.2756,-2.88189)">
+						<title>Уровень в хранилище</title>
+						<desc>E уровень</desc>
+                        <rect x="0" width="2.83465" class="st8"
+                              data-bind="attr:
+                                {
+                                    y: 472.089 + 40.0871 - 80.6929 * model.tanks[4].balancePercent() / 100,
+                                    height: 80.6929 * model.tanks[4].balancePercent() / 100
+                                }" />
+					</g>
+					<g id="group68-141" transform="translate(68.0315,-30.9803)">
+						<g id="shape69-142">
+							<path d="M0 496.87 L0 487.68 L12.76 487.68 L17.01 487.68 L21.26 487.68 L34.02 487.68 L34.02 496.87 L34.02&#xD;&#xA;										 499.93 L34.02 502.99 L34.02 512.18 L21.26 512.18 L17.01 512.18 L12.76 512.18 L0 512.18 L0&#xD;&#xA;										 502.99 L-9.92 492.64 L0 496.87 Z" class="st9" />
+						</g>
+						<g id="shape70-144" transform="translate(4.19664E-014,-11.2005)">
+							<desc>E процент</desc>
+							<rect x="0" y="498.881" width="34.0157" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[4].balancePercent() + ' %', css: getBalanceCSS(4)" />							</g>
+						<g id="shape71-147">
+							<desc>E тонн</desc>
+							<rect x="0" y="498.881" width="32.5984" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[4].balance().toFixed(2) + ' т', css: getBalanceCSS(4)" />						</g>
+					</g>
+					<g id="shape72-151" transform="translate(21.2598,-36.0236)">
+						<desc>E</desc>
+						<rect x="0" y="495.91" width="21.2238" height="16.2667" class="st10" />
+						<text x="4.76" y="511.24" class="st14" fill="#7030a0">E</text>					</g>
+				</g>
+				<g id="group33-154" transform="translate(11.3386,-120.472)">
+					<g id="group34-155">
+						<g id="shape35-156">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape36-159" transform="translate(86.3892,0)">
+							<path d="M0 468.95 A13.4983 43.2283 0 0 1 27 468.95 A13.4983 43.2283 0 0 1 0 468.95 Z" class="st4" />
+						</g>
+						<g id="shape37-162" transform="translate(13.4983,-1.13687E-013)">
+							<rect x="0" y="425.72" width="86.3892" height="86.4567" class="st5" />
+						</g>
+						<g id="shape38-165" transform="translate(13.4983,-86.4567)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+						<g id="shape39-169" transform="translate(13.4983,4.54747E-013)">
+							<path d="M0 512.18 L86.39 512.18" class="st6" />
+						</g>
+					</g>
+					<g id="shape40-173" transform="translate(55.2756,-2.88189)">
+						<rect x="0" y="431.483" width="2.83465" height="80.6929" class="st7" />
+					</g>
+					<g id="shape41-175" transform="translate(55.2756,-2.88189)">
+						<title>Уровень в хранилище</title>
+						<desc>A уровень</desc>
+                        <rect x="0" width="2.83465" class="st8"
+                              data-bind="attr:
+                                {
+                                    y: 472.089 + 40.0871 - 80.6929 * model.tanks[0].balancePercent() / 100,
+                                    height: 80.6929 * model.tanks[0].balancePercent() / 100
+                                }" />
+					</g>
+                    <g id="group42-177" transform="translate(68.0315,-30.9803)">
+                    <g id="shape43-178">
+                    <path d="M0 496.87 L0 487.68 L12.76 487.68 L17.01 487.68 L21.26 487.68 L34.02 487.68 L34.02 496.87 L34.02&#xD;&#xA;										 499.93 L34.02 502.99 L34.02 512.18 L21.26 512.18 L17.01 512.18 L12.76 512.18 L0 512.18 L0&#xD;&#xA;										 502.99 L-9.92 492.64 L0 496.87 Z" class="st9" />
+						</g>
+                    <g id="shape44-180" transform="translate(4.19664E-014,-11.2005)">
+                    <desc>A процент</desc>
+                    <rect x="0" y="498.881" width="34.0157" height="13.2956" class="st10" />
+                        <text x="4" y="507.93" data-bind="text: model.tanks[0].balancePercent() + ' %', css: getBalanceCSS(0)" />						
+                    </g>
+						<g id="shape45-183">
+							<desc>A тонн</desc>
+							<rect x="0" y="498.881" width="32.5984" height="13.2956" class="st10" />
+                            <text x="4" y="507.93" data-bind="text: model.tanks[0].balance().toFixed(2) + ' т', css: getBalanceCSS(0)" />					</g>
+					</g>
+					<g id="shape46-187" transform="translate(21.2598,-36.0236)">
+						<desc>A</desc>
+						<rect x="0" y="495.91" width="21.2238" height="16.2667" class="st10" />
+						<text x="4" y="511.24" class="st14" fill="#ff0000">A</text>					</g>
+				</g>
+				<g id="group347-190" transform="translate(24.5197,-206.929)">
+					<g id="group73-191" transform="translate(35.4331,-49.005)" data-bind="click: clickValve.bind($data, 0), clickBubble: false">
+						<title>Общий клапан</title>
+						<desc>Общий клапан</desc>
+						<g id="group75-192">
+							<g id="group76-193">
+								<g id="shape77-194" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow77-195" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.commonValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape78-200" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow78-201" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.commonValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape79-205" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow79-206" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape80-212" transform="translate(2.36677,-9.79531)">
+								<g id="shadow80-213" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape81-219" transform="translate(2.36677,-9.79531)">
+								<g id="shadow81-220" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group106-226" transform="translate(568.869,469.947) rotate(90)" data-bind="click: clickValve.bind($data, 1), clickBubble: false">
+						<title>Входной клапан</title>
+						<desc>A клапан вход</desc>
+						<g id="group108-227">
+							<g id="group109-228">
+								<g id="shape110-229" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow110-230" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[0].inValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape111-235" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow111-236" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[0].inValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape112-240" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow112-241" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape113-247" transform="translate(2.36677,-9.79531)">
+								<g id="shadow113-248" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape114-254" transform="translate(2.36677,-9.79531)">
+								<g id="shadow114-255" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group115-261" transform="translate(588.189,-42.632)">
+						<g id="shape116-262" transform="translate(6.16015,-6.33391)">
+							<g id="shadow116-263" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<ellipse cx="3.45274" cy="508.901" rx="3.45274" ry="3.27552" class="st2" />
+							</g>
+							<ellipse cx="3.45274" cy="508.901" rx="3.45274" ry="3.27552" class="st20" />
+						</g>
+						<g id="shape117-268" transform="translate(5.27067,-6.01317)">
+							<g id="shadow117-269" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<rect x="0" y="505.091" width="5.1119" height="7.08508" class="st2" />
+							</g>
+							<rect x="0" y="505.091" width="5.1119" height="7.08508" class="st20" />
+						</g>
+						<g id="shape118-273" transform="translate(-5.24622E-012,-5.78002)">
+							<g id="shadow118-274" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<rect x="0" y="504.599" width="2.77239" height="7.57722" class="st2" />
+							</g>
+							<rect x="0" y="504.599" width="2.77239" height="7.57722" class="st20" />
+						</g>
+						<g id="shape119-278" transform="translate(0.563314,-5.78002)">
+							<g id="shadow119-279" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<rect x="0" y="504.599" width="4.41815" height="7.57722" class="st2" />
+							</g>
+							<rect x="0" y="504.599" width="4.41815" height="7.57722" class="st20" />
+						</g>
+						<g id="shape120-283" transform="translate(-498.566,509.521) rotate(-90)">
+							<g id="shadow120-284" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L6.97 512.18 A3.54656 3.68176 -180 0 0 6.97 504.82 L0 504.82 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L6.97 512.18 A3.54656 3.68176 -180 0 0 6.97 504.82 L0 504.82 L0 512.18 Z" class="st20" />
+						</g>
+						<g id="shape121-288" transform="translate(-498.293,512.176) rotate(-90)">
+							<g id="shadow121-289" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="504.189" width="2.63009" height="7.98718" class="st2" />
+							</g>
+							<rect x="0" y="504.189" width="2.63009" height="7.98718" class="st20" />
+						</g>
+						<g id="shape122-293" transform="translate(-498.293,511.642) rotate(-90)">
+							<g id="shadow122-294" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="504.189" width="4.19137" height="7.98718" class="st2" />
+							</g>
+							<rect x="0" y="504.189" width="4.19137" height="7.98718" class="st20" />
+						</g>
+						<g id="shape123-298" transform="translate(518.345,502.287) rotate(89.9649)">
+							<g id="shadow123-299" transform="matrix(1,-4.89691E-020,-4.89691E-020,1,1.44088,-1.43912)" class="st1">
+								<path d="M0 512.18 L4.16 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.16 512.18" class="st18" />
+						</g>
+						<g id="shape124-305" transform="translate(5.63769,-5.34439)">
+							<g id="shadow124-306" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0.07 504.42 C1.3 504.3 2.85 504.39 3.88 504.45 C4.41 504.48 4.8 504.51 5.3 504.65 C5.54&#xD;&#xA;											 504.72 5.79 504.81 6.02 504.92 C6.17 505 6.31 505.08 6.49 505.21 C6.66 505.34 6.86 505.52&#xD;&#xA;											 6.98 505.63 C7.06 505.71 7.1 505.76 7.14 505.8 C7.2 505.88 7.26 505.95 7.33 506.06 C7.39&#xD;&#xA;											 506.13 7.45 506.23 7.49 506.3 C7.54 506.37 7.57 506.42 7.6 506.49 C7.69 506.67 7.81&#xD;&#xA;											 507 7.89 507.3 C8.03 507.87 7.98 508.34 7.97 508.85 C7.96 509.17 7.97 509.52 7.97 509.89&#xD;&#xA;											 C7.97 510.33 7.95 510.81 7.97 511.25 C8 511.68 8.06 512.07 7.9 512.15 C7.8 512.2 7.61&#xD;&#xA;											 512.12 7.41 512.1 C7.22 512.08 7.02 512.1 6.8 512.11 C6.66 512.11 6.5 512.11 6.37 512.1&#xD;&#xA;											 C6.21 512.1 6.08 512.1 5.95 512.1 C5.66 512.1 5.38 512.1 4.97 512.1 C4.56 512.1 4.03&#xD;&#xA;											 512.1 3.71 512.1 C3.55 512.1 3.44 512.1 3.28 512.1 C3.18 512.1 3.08 512.1 2.96 512.1&#xD;&#xA;											 C2.69 512.1 2.38 512.11 2.02 512.1 C1.62 512.09 1.16 512.06 0.88 512.1 C0.61 512.15&#xD;&#xA;											 0.52 512.27 0.53 512.04 C0.54 511.88 0.59 511.56 0.5 511.43 C0.46 511.36 0.38 511.35&#xD;&#xA;											 0.31 511.32 C-0.13 511.1 0.07 510.19 0.08 509.44 C0.09 508.94 0.01 508.51 0 507.97 C-0.01&#xD;&#xA;											 507.38 0.06 506.65 0.08 506.23 C0.09 505.91 0.08 505.77 0.07 505.55 C0.07 505.34 0.07&#xD;&#xA;											 505.07 0.07 504.83 C0.07 504.8 0.07 504.77 0.07 504.79 C0.07 504.8 0.07 504.82 0.07&#xD;&#xA;											 504.83 C0.07 504.85 0.07 504.3 0.07 504.42 Z" class="st2" />
+							</g>
+							<path d="M0.07 504.42 C1.3 504.3 2.85 504.39 3.88 504.45 C4.41 504.48 4.8 504.51 5.3 504.65 C5.54 504.72&#xD;&#xA;										 5.79 504.81 6.02 504.92 C6.17 505 6.31 505.08 6.49 505.21 C6.66 505.34 6.86 505.52 6.98&#xD;&#xA;										 505.63 C7.06 505.71 7.1 505.76 7.14 505.8 C7.2 505.88 7.26 505.95 7.33 506.06 C7.39 506.13&#xD;&#xA;										 7.45 506.23 7.49 506.3 C7.54 506.37 7.57 506.42 7.6 506.49 C7.69 506.67 7.81 507 7.89 507.3&#xD;&#xA;										 C8.03 507.87 7.98 508.34 7.97 508.85 C7.96 509.17 7.97 509.52 7.97 509.89 C7.97 510.33 7.95&#xD;&#xA;										 510.81 7.97 511.25 C8 511.68 8.06 512.07 7.9 512.15 C7.8 512.2 7.61 512.12 7.41 512.1 C7.22&#xD;&#xA;										 512.08 7.02 512.1 6.8 512.11 C6.66 512.11 6.5 512.11 6.37 512.1 C6.21 512.1 6.08 512.1 5.95&#xD;&#xA;										 512.1 C5.66 512.1 5.38 512.1 4.97 512.1 C4.56 512.1 4.03 512.1 3.71 512.1 C3.55 512.1 3.44&#xD;&#xA;										 512.1 3.28 512.1 C3.18 512.1 3.08 512.1 2.96 512.1 C2.69 512.1 2.38 512.11 2.02 512.1 C1.62&#xD;&#xA;										 512.09 1.16 512.06 0.88 512.1 C0.61 512.15 0.52 512.27 0.53 512.04 C0.54 511.88 0.59 511.56&#xD;&#xA;										 0.5 511.43 C0.46 511.36 0.38 511.35 0.31 511.32 C-0.13 511.1 0.07 510.19 0.08 509.44 C0.09&#xD;&#xA;										 508.94 0.01 508.51 0 507.97 C-0.01 507.38 0.06 506.65 0.08 506.23 C0.09 505.91 0.08 505.77&#xD;&#xA;										 0.07 505.55 C0.07 505.34 0.07 505.07 0.07 504.83 C0.07 504.8 0.07 504.77 0.07 504.79 C0.07&#xD;&#xA;										 504.8 0.07 504.82 0.07 504.83 C0.07 504.85 0.07 504.3 0.07 504.42 Z" class="st20" />
+						</g>
+						<g id="shape125-310" transform="translate(-498.293,507.45) rotate(-90)">
+							<g id="shadow125-311" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L0.69 511.88 L0.69 504.46 L0 504.19 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L0.69 511.88 L0.69 504.46 L0 504.19 L0 512.18 Z" class="st21" />
+						</g>
+						<g id="shape126-315" transform="translate(4.98146,-5.78002)">
+							<g id="shadow126-316" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L0.73 511.9 L0.73 504.86 L0 504.6 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L0.73 511.9 L0.73 504.86 L0 504.6 L0 512.18 Z" class="st21" />
+						</g>
+					</g>
+					<g id="group127-320" transform="translate(63.5993,996.006) rotate(180)">
+						<g id="shape128-321">
+							<g id="shadow128-322" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape129-325" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow129-326" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape130-331" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow130-332" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group131-337" transform="translate(48.9141,968.068) scale(1,-1)">
+						<g id="shape132-338" transform="translate(5.14304,-0.248771)">
+							<g id="shadow132-339" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+								<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st2" />
+							</g>
+							<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st20" />
+						</g>
+						<g id="shape133-343" transform="translate(519.389,501.887) rotate(90)">
+							<g id="shadow133-344" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st20" />
+						</g>
+						<g id="shape134-348" transform="translate(5.14304,-3.41061E-013)">
+							<g id="shadow134-349" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+						</g>
+						<g id="shape135-353">
+							<g id="shadow135-354" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+							</g>
+							<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+						</g>
+						<g id="shape136-358" transform="translate(0.581586,0)">
+							<g id="shadow136-359" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+							</g>
+							<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+						</g>
+						<g id="shape137-363" transform="translate(16.809,1016.21) rotate(180)">
+							<g id="shadow137-364" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+						</g>
+						<g id="shape138-368" transform="translate(21.952,1016.21) rotate(180)">
+							<g id="shadow138-369" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+							</g>
+							<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+						</g>
+						<g id="shape139-373" transform="translate(21.3704,1016.21) rotate(180)">
+							<g id="shadow139-374" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+							</g>
+							<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+						</g>
+						<g id="shape140-378" transform="translate(519.138,501.887) rotate(90)">
+							<g id="shadow140-379" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st2" />
+							</g>
+							<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st21" />
+						</g>
+						<g id="shape141-383" transform="translate(519.138,498.121) rotate(90)">
+							<g id="shadow141-384" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st2" />
+							</g>
+							<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st20" />
+						</g>
+						<g id="shape142-388" transform="translate(519.138,498.547) rotate(90)">
+							<g id="shadow142-389" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st2" />
+							</g>
+							<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st20" />
+						</g>
+						<g id="shape143-393" transform="translate(-5.827,-7.67197) rotate(-1.3115)">
+							<g id="shadow143-394" transform="matrix(1,-1.74828E-018,2.40727E-018,1,1.47258,-1.40666)" class="st1">
+								<path d="M0 512.18 L1.32 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L1.32 512.18" class="st18" />
+						</g>
+						<g id="shape144-400" transform="translate(8.69661,-7.79916) rotate(-0.690018)">
+							<g id="shadow144-401" transform="matrix(1,4.81115E-019,8.38563E-020,1,1.45724,-1.42255)" class="st1">
+								<path d="M0 512.18 L1.19 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L1.19 512.18" class="st18" />
+						</g>
+						<g id="shape145-407" transform="translate(3.65223,-0.291699) rotate(-0.250969)">
+							<g id="shadow145-408" transform="matrix(1,6.8652E-019,-4.56551E-019,1,1.44629,-1.43368)" class="st1">
+								<path d="M0 512.18 L10.16 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L10.16 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group150-414" transform="translate(-477.145,462.957) rotate(-90)">
+						<g id="shape151-415">
+							<g id="shadow151-416" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape152-419" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow152-420" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape153-425" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow153-426" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="shape156-431" transform="translate(34.0157,-36.8504) scale(-1,1)" data-bind="visible: model.commonValveOpened()" >
+						<desc>Стрелка CO2</desc>
+						<g id="shadow156-432" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+							<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85&#xD;&#xA;										 L11.34 523.51 L0 512.18 Z" class="st2" />
+						</g>
+						<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;									 523.51 L0 512.18 Z" class="st3" />
+						<text x="-24.68" y="515.18" transform="scale(-1,1)" class="st23">CO<tspan dy="0.5em" class="st24">2</tspan></text>					
+					</g>
+					<g id="group247-438" transform="translate(71.268,0)">
+						<g id="group157-439" transform="translate(-399.884,463.647) rotate(-90)">
+							<g id="shape158-440">
+								<g id="shadow158-441" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="399.884" width="7.2556" height="112.292" class="st2" />
+								</g>
+								<rect x="0" y="399.884" width="7.2556" height="112.292" class="st22" />
+							</g>
+							<g id="shape159-444" transform="translate(514.237,399.884) rotate(90)">
+								<g id="shadow159-445" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L112.29 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L112.29 512.18" class="st18" />
+							</g>
+							<g id="shape160-450" transform="translate(517.502,399.884) rotate(90)">
+								<g id="shadow160-451" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L112.29 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L112.29 512.18" class="st18" />
+							</g>
+						</g>
+						<g id="group185-456" transform="translate(632.247,469.947) rotate(90)" data-bind="click: clickValve.bind($data, 2), clickBubble: false">
+						    <title>Входной клапан</title>
+							<desc>B клапан вход</desc>
+							<g id="group187-457">
+								<g id="group188-458">
+									<g id="shape189-459" transform="translate(-498.293,512.176) rotate(-90)">
+										<g id="shadow189-460" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+											<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+										</g>
+                                        <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[1].inValveOpened() ? 'st16' : 'st19'" />
+									</g>
+									<g id="shape190-464" transform="translate(512.176,505.264) rotate(90)">
+										<g id="shadow190-465" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+											<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+										</g>
+                                        <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[1].inValveOpened() ? 'st16' : 'st19'" />
+									</g>
+								</g>
+								<g id="shape191-469" transform="translate(-505.206,508.72) rotate(-90)">
+									<g id="shadow191-470" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+										<path d="M0 512.18 L6.34 512.18" class="st17" />
+									</g>
+									<path d="M0 512.18 L6.34 512.18" class="st18" />
+								</g>
+								<g id="shape192-476" transform="translate(2.36677,-9.79531)">
+									<g id="shadow192-477" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M0 512.18 L9.62 512.18" class="st17" />
+									</g>
+									<path d="M0 512.18 L9.62 512.18" class="st18" />
+								</g>
+								<g id="shape193-483" transform="translate(2.36677,-9.79531)">
+									<g id="shadow193-484" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+									</g>
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+								</g>
+							</g>
+						</g>
+						<g id="group194-490" transform="translate(126.977,996.006) rotate(180)">
+							<g id="shape195-491">
+								<g id="shadow195-492" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+								</g>
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+							</g>
+							<g id="shape196-495" transform="translate(514.138,483.83) rotate(90)">
+								<g id="shadow196-496" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L28.35 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L28.35 512.18" class="st18" />
+							</g>
+							<g id="shape197-501" transform="translate(517.246,483.83) rotate(90)">
+								<g id="shadow197-502" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L28.35 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L28.35 512.18" class="st18" />
+							</g>
+						</g>
+						<g id="group198-507" transform="translate(112.292,968.068) scale(1,-1)">
+							<g id="shape199-508" transform="translate(5.14304,-0.248771)">
+								<g id="shadow199-509" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st2" />
+								</g>
+								<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st20" />
+							</g>
+							<g id="shape200-513" transform="translate(519.389,501.887) rotate(90)">
+								<g id="shadow200-514" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st20" />
+							</g>
+							<g id="shape201-518" transform="translate(5.14304,-3.41061E-013)">
+								<g id="shadow201-519" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape202-523">
+								<g id="shadow202-524" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+							</g>
+							<g id="shape203-528" transform="translate(0.581586,0)">
+								<g id="shadow203-529" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+							</g>
+							<g id="shape204-533" transform="translate(16.809,1016.21) rotate(180)">
+								<g id="shadow204-534" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape205-538" transform="translate(21.952,1016.21) rotate(180)">
+								<g id="shadow205-539" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+							</g>
+							<g id="shape206-543" transform="translate(21.3704,1016.21) rotate(180)">
+								<g id="shadow206-544" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+							</g>
+							<g id="shape207-548" transform="translate(519.138,501.887) rotate(90)">
+								<g id="shadow207-549" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape208-553" transform="translate(519.138,498.121) rotate(90)">
+								<g id="shadow208-554" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st2" />
+								</g>
+								<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st20" />
+							</g>
+							<g id="shape209-558" transform="translate(519.138,498.547) rotate(90)">
+								<g id="shadow209-559" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st2" />
+								</g>
+								<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st20" />
+							</g>
+							<g id="shape210-563" transform="translate(-5.827,-7.67197) rotate(-1.3115)">
+								<g id="shadow210-564" transform="matrix(1,-1.74828E-018,2.40727E-018,1,1.47258,-1.40666)" class="st1">
+									<path d="M0 512.18 L1.32 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L1.32 512.18" class="st18" />
+							</g>
+							<g id="shape211-570" transform="translate(8.69661,-7.79916) rotate(-0.690018)">
+								<g id="shadow211-571" transform="matrix(1,4.81115E-019,8.38563E-020,1,1.45724,-1.42255)" class="st1">
+									<path d="M0 512.18 L1.19 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L1.19 512.18" class="st18" />
+							</g>
+							<g id="shape212-577" transform="translate(3.65223,-0.291699) rotate(-0.250969)">
+								<g id="shadow212-578" transform="matrix(1,6.8652E-019,-4.56551E-019,1,1.44629,-1.43368)" class="st1">
+									<path d="M0 512.18 L10.16 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L10.16 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group248-584" transform="translate(205.512,-0.203997)">
+						<g id="group249-585" transform="translate(-399.884,463.647) rotate(-90)">
+							<g id="shape250-586">
+								<g id="shadow250-587" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="399.884" width="7.2556" height="112.292" class="st2" />
+								</g>
+								<rect x="0" y="399.884" width="7.2556" height="112.292" class="st22" />
+							</g>
+							<g id="shape251-590" transform="translate(514.237,399.884) rotate(90)">
+								<g id="shadow251-591" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L112.29 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L112.29 512.18" class="st18" />
+							</g>
+							<g id="shape252-596" transform="translate(517.502,399.884) rotate(90)">
+								<g id="shadow252-597" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L112.29 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L112.29 512.18" class="st18" />
+							</g>
+						</g>
+						<g id="group253-602" transform="translate(632.247,469.947) rotate(90)" data-bind="click: clickValve.bind($data, 3), clickBubble: false">
+    						<title>Входной клапан</title>
+							<desc>C клапан вход</desc>
+							<g id="group255-603">
+								<g id="group256-604">
+									<g id="shape257-605" transform="translate(-498.293,512.176) rotate(-90)">
+										<g id="shadow257-606" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+											<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+										</g>
+                                        <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[2].inValveOpened() ? 'st16' : 'st19'" />
+									</g>
+									<g id="shape258-610" transform="translate(512.176,505.264) rotate(90)">
+										<g id="shadow258-611" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+											<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+										</g>
+                                        <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[2].inValveOpened() ? 'st16' : 'st19'" />
+									</g>
+								</g>
+								<g id="shape259-615" transform="translate(-505.206,508.72) rotate(-90)">
+									<g id="shadow259-616" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+										<path d="M0 512.18 L6.34 512.18" class="st17" />
+									</g>
+									<path d="M0 512.18 L6.34 512.18" class="st18" />
+								</g>
+								<g id="shape260-622" transform="translate(2.36677,-9.79531)">
+									<g id="shadow260-623" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M0 512.18 L9.62 512.18" class="st17" />
+									</g>
+									<path d="M0 512.18 L9.62 512.18" class="st18" />
+								</g>
+								<g id="shape261-629" transform="translate(2.36677,-9.79531)">
+									<g id="shadow261-630" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+									</g>
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+								</g>
+							</g>
+						</g>
+						<g id="group262-636" transform="translate(126.977,996.006) rotate(180)">
+							<g id="shape263-637">
+								<g id="shadow263-638" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+								</g>
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+							</g>
+							<g id="shape264-641" transform="translate(514.138,483.83) rotate(90)">
+								<g id="shadow264-642" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L28.35 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L28.35 512.18" class="st18" />
+							</g>
+							<g id="shape265-647" transform="translate(517.246,483.83) rotate(90)">
+								<g id="shadow265-648" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L28.35 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L28.35 512.18" class="st18" />
+							</g>
+						</g>
+						<g id="group266-653" transform="translate(112.292,968.068) scale(1,-1)">
+							<g id="shape267-654" transform="translate(5.14304,-0.248771)">
+								<g id="shadow267-655" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st2" />
+								</g>
+								<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st20" />
+							</g>
+							<g id="shape268-659" transform="translate(519.389,501.887) rotate(90)">
+								<g id="shadow268-660" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st20" />
+							</g>
+							<g id="shape269-664" transform="translate(5.14304,-3.41061E-013)">
+								<g id="shadow269-665" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape270-669">
+								<g id="shadow270-670" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+							</g>
+							<g id="shape271-674" transform="translate(0.581586,0)">
+								<g id="shadow271-675" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+							</g>
+							<g id="shape272-679" transform="translate(16.809,1016.21) rotate(180)">
+								<g id="shadow272-680" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape273-684" transform="translate(21.952,1016.21) rotate(180)">
+								<g id="shadow273-685" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+							</g>
+							<g id="shape274-689" transform="translate(21.3704,1016.21) rotate(180)">
+								<g id="shadow274-690" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+							</g>
+							<g id="shape275-694" transform="translate(519.138,501.887) rotate(90)">
+								<g id="shadow275-695" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape276-699" transform="translate(519.138,498.121) rotate(90)">
+								<g id="shadow276-700" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st2" />
+								</g>
+								<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st20" />
+							</g>
+							<g id="shape277-704" transform="translate(519.138,498.547) rotate(90)">
+								<g id="shadow277-705" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st2" />
+								</g>
+								<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st20" />
+							</g>
+							<g id="shape278-709" transform="translate(-5.827,-7.67197) rotate(-1.3115)">
+								<g id="shadow278-710" transform="matrix(1,-2.60378E-018,2.48011E-018,1,1.47258,-1.40666)" class="st1">
+									<path d="M0 512.18 L1.32 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L1.32 512.18" class="st18" />
+							</g>
+							<g id="shape279-716" transform="translate(8.69661,-7.79916) rotate(-0.690018)">
+								<g id="shadow279-717" transform="matrix(1,4.81115E-019,8.38563E-020,1,1.45724,-1.42255)" class="st1">
+									<path d="M0 512.18 L1.19 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L1.19 512.18" class="st18" />
+							</g>
+							<g id="shape280-723" transform="translate(3.65223,-0.291699) rotate(-0.250969)">
+								<g id="shadow280-724" transform="matrix(1,6.8652E-019,-4.56551E-019,1,1.44629,-1.43368)" class="st1">
+									<path d="M0 512.18 L10.16 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L10.16 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group281-730" transform="translate(340.157,-0.203997)">
+						<g id="group282-731" transform="translate(-399.884,463.647) rotate(-90)">
+							<g id="shape283-732">
+								<g id="shadow283-733" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="399.884" width="7.2556" height="112.292" class="st2" />
+								</g>
+								<rect x="0" y="399.884" width="7.2556" height="112.292" class="st22" />
+							</g>
+							<g id="shape284-736" transform="translate(514.237,399.884) rotate(90)">
+								<g id="shadow284-737" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L112.29 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L112.29 512.18" class="st18" />
+							</g>
+							<g id="shape285-742" transform="translate(517.502,399.884) rotate(90)">
+								<g id="shadow285-743" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L112.29 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L112.29 512.18" class="st18" />
+							</g>
+						</g>
+						<g id="group286-748" transform="translate(632.247,469.947) rotate(90)" data-bind="click: clickValve.bind($data, 4), clickBubble: false">
+    						<title>Входной клапан</title>
+							<desc>D клапан вход</desc>
+							<g id="group288-749">
+								<g id="group289-750">
+									<g id="shape290-751" transform="translate(-498.293,512.176) rotate(-90)">
+										<g id="shadow290-752" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+											<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+										</g>
+                                        <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[3].inValveOpened() ? 'st16' : 'st19'" />
+									</g>
+									<g id="shape291-756" transform="translate(512.176,505.264) rotate(90)">
+										<g id="shadow291-757" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+											<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+										</g>
+                                        <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[3].inValveOpened() ? 'st16' : 'st19'" />
+									</g>
+								</g>
+								<g id="shape292-761" transform="translate(-505.206,508.72) rotate(-90)">
+									<g id="shadow292-762" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+										<path d="M0 512.18 L6.34 512.18" class="st17" />
+									</g>
+									<path d="M0 512.18 L6.34 512.18" class="st18" />
+								</g>
+								<g id="shape293-768" transform="translate(2.36677,-9.79531)">
+									<g id="shadow293-769" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M0 512.18 L9.62 512.18" class="st17" />
+									</g>
+									<path d="M0 512.18 L9.62 512.18" class="st18" />
+								</g>
+								<g id="shape294-775" transform="translate(2.36677,-9.79531)">
+									<g id="shadow294-776" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+									</g>
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+								</g>
+							</g>
+						</g>
+						<g id="group295-782" transform="translate(126.977,996.006) rotate(180)">
+							<g id="shape296-783">
+								<g id="shadow296-784" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+								</g>
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+							</g>
+							<g id="shape297-787" transform="translate(514.138,483.83) rotate(90)">
+								<g id="shadow297-788" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L28.35 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L28.35 512.18" class="st18" />
+							</g>
+							<g id="shape298-793" transform="translate(517.246,483.83) rotate(90)">
+								<g id="shadow298-794" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L28.35 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L28.35 512.18" class="st18" />
+							</g>
+						</g>
+						<g id="group299-799" transform="translate(112.292,968.068) scale(1,-1)">
+							<g id="shape300-800" transform="translate(5.14304,-0.248771)">
+								<g id="shadow300-801" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st2" />
+								</g>
+								<rect x="0" y="504.589" width="11.4778" height="7.58753" class="st20" />
+							</g>
+							<g id="shape301-805" transform="translate(519.389,501.887) rotate(90)">
+								<g id="shadow301-806" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L2.45 512.18 A7.46102 7.60976 -180 0 0 2.45 504.52 L0 504.52 L0 512.18 Z" class="st20" />
+							</g>
+							<g id="shape302-810" transform="translate(5.14304,-3.41061E-013)">
+								<g id="shadow302-811" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape303-815">
+								<g id="shadow303-816" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+							</g>
+							<g id="shape304-820" transform="translate(0.581586,0)">
+								<g id="shadow304-821" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+							</g>
+							<g id="shape305-825" transform="translate(16.809,1016.21) rotate(180)">
+								<g id="shadow305-826" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.75 511.88 L0.75 504.37 L0 504.09 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape306-830" transform="translate(21.952,1016.21) rotate(180)">
+								<g id="shadow306-831" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="2.86231" height="8.08507" class="st20" />
+							</g>
+							<g id="shape307-835" transform="translate(21.3704,1016.21) rotate(180)">
+								<g id="shadow307-836" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+									<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st2" />
+								</g>
+								<rect x="0" y="504.091" width="4.56146" height="8.08507" class="st20" />
+							</g>
+							<g id="shape308-840" transform="translate(519.138,501.887) rotate(90)">
+								<g id="shadow308-841" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st2" />
+								</g>
+								<path d="M0 512.18 L0.55 511.88 L0.55 504.3 L0 504.02 L0 512.18 Z" class="st21" />
+							</g>
+							<g id="shape309-845" transform="translate(519.138,498.121) rotate(90)">
+								<g id="shadow309-846" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st2" />
+								</g>
+								<rect x="0" y="504.023" width="2.09623" height="8.1536" class="st20" />
+							</g>
+							<g id="shape310-850" transform="translate(519.138,498.547) rotate(90)">
+								<g id="shadow310-851" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st2" />
+								</g>
+								<rect x="0" y="504.023" width="3.3406" height="8.1536" class="st20" />
+							</g>
+							<g id="shape311-855" transform="translate(-5.827,-7.67197) rotate(-1.3115)">
+								<g id="shadow311-856" transform="matrix(1,-1.74828E-018,2.40727E-018,1,1.47258,-1.40666)" class="st1">
+									<path d="M0 512.18 L1.32 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L1.32 512.18" class="st18" />
+							</g>
+							<g id="shape312-862" transform="translate(8.69661,-7.79916) rotate(-0.690018)">
+								<g id="shadow312-863" transform="matrix(1,4.81115E-019,8.38563E-020,1,1.45724,-1.42255)" class="st1">
+									<path d="M0 512.18 L1.19 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L1.19 512.18" class="st18" />
+							</g>
+							<g id="shape313-869" transform="translate(3.65223,-0.291699) rotate(-0.250969)">
+								<g id="shadow313-870" transform="matrix(1,6.8652E-019,-4.56551E-019,1,1.44629,-1.43368)" class="st1">
+									<path d="M0 512.18 L10.16 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L10.16 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group315-876" transform="translate(74.9188,463.443) rotate(-90)">
+						<g id="shape316-877">
+							<g id="shadow316-878" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="399.884" width="7.2556" height="112.292" class="st2" />
+							</g>
+							<rect x="0" y="399.884" width="7.2556" height="112.292" class="st22" />
+						</g>
+						<g id="shape317-881" transform="translate(514.237,399.884) rotate(90)">
+							<g id="shadow317-882" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L112.29 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L112.29 512.18" class="st18" />
+						</g>
+						<g id="shape318-887" transform="translate(517.502,399.884) rotate(90)">
+							<g id="shadow318-888" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L112.29 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L112.29 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group319-893" transform="translate(1107.05,469.743) rotate(90)" data-bind="click: clickValve.bind($data, 5), clickBubble: false">
+						<title>Входной клапан</title>
+						<desc>E клапан вход</desc>
+						<g id="group321-894">
+							<g id="group322-895">
+								<g id="shape323-896" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow323-897" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[4].inValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape324-901" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow324-902" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[4].inValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape325-906" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow325-907" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape326-913" transform="translate(2.36677,-9.79531)">
+								<g id="shadow326-914" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape327-920" transform="translate(2.36677,-9.79531)">
+								<g id="shadow327-921" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group328-927" transform="translate(601.78,995.802) rotate(180)">
+						<g id="shape329-928">
+							<g id="shadow329-929" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape330-932" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow330-933" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape331-938" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow331-939" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="group527-944" transform="translate(79.5118,-66.952)">
+					<g id="group359-945" transform="translate(513.877,500.885) rotate(90) scale(-1,1)" data-bind="click: clickValve.bind($data, -1), clickBubble: false">
+						<title>Выходной клапан</title>
+						<desc>A клапан выход</desc>
+						<g id="group361-946">
+							<g id="group362-947">
+								<g id="shape363-948" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow363-949" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[0].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape364-953" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow364-954" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[0].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape365-958" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow365-959" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape366-965" transform="translate(2.36677,-9.79531)">
+								<g id="shadow366-966" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape367-972" transform="translate(2.36677,-9.79531)">
+								<g id="shadow367-973" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group380-979" transform="translate(8.60722,-25.174) scale(-1,1)">
+						<g id="shape381-980">
+							<g id="shadow381-981" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape382-984" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow382-985" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape383-990" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow383-991" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group521-996">
+						<g id="shape522-997" transform="translate(-504.082,505.145) rotate(-90)">
+							<g id="shadow522-998" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st2" />
+							</g>
+							<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st20" />
+						</g>
+						<g id="shape523-1002" transform="translate(10.3442,1019.63) rotate(180)">
+							<g id="shadow523-1003" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st2" />
+							</g>
+							<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st20" />
+						</g>
+						<g id="shape524-1007" transform="translate(-502.323,507.531) rotate(-90)">
+							<g id="shadow524-1008" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st2" />
+							</g>
+							<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st20" />
+						</g>
+						<g id="shape525-1012" transform="translate(-504.864,512.319) rotate(-90.016)">
+							<g id="shadow525-1013" transform="matrix(1,1.71259E-020,1.71259E-020,1,-1.4404,1.4396)" class="st1">
+								<path d="M0 512.18 L4.7 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.7 512.18" class="st18" />
+						</g>
+						<g id="shape526-1019" transform="translate(-508.801,512.324) rotate(-90.0165)">
+							<g id="shadow526-1020" transform="matrix(1,1.99053E-020,1.99053E-020,1,-1.44041,1.43959)" class="st1">
+								<path d="M0 512.18 L4.67 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.67 512.18" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="group528-1026" transform="translate(213.556,-66.952)">
+					<g id="group529-1027" transform="translate(513.877,500.885) rotate(90) scale(-1,1)" data-bind="click: clickValve.bind($data, -2), clickBubble: false">
+						<title>Выходной клапан</title>
+						<desc>B клапан выход</desc>
+						<g id="group531-1028">
+							<g id="group532-1029">
+								<g id="shape533-1030" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow533-1031" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[1].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape534-1035" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow534-1036" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[1].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape535-1040" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow535-1041" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape536-1047" transform="translate(2.36677,-9.79531)">
+								<g id="shadow536-1048" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape537-1054" transform="translate(2.36677,-9.79531)">
+								<g id="shadow537-1055" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group538-1061" transform="translate(8.60722,-25.174) scale(-1,1)">
+						<g id="shape539-1062">
+							<g id="shadow539-1063" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape540-1066" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow540-1067" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape541-1072" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow541-1073" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group542-1078">
+						<g id="shape543-1079" transform="translate(-504.082,505.145) rotate(-90)">
+							<g id="shadow543-1080" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st2" />
+							</g>
+							<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st20" />
+						</g>
+						<g id="shape544-1084" transform="translate(10.3442,1019.63) rotate(180)">
+							<g id="shadow544-1085" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st2" />
+							</g>
+							<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st20" />
+						</g>
+						<g id="shape545-1089" transform="translate(-502.323,507.531) rotate(-90)">
+							<g id="shadow545-1090" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st2" />
+							</g>
+							<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st20" />
+						</g>
+						<g id="shape546-1094" transform="translate(-504.864,512.319) rotate(-90.016)">
+							<g id="shadow546-1095" transform="matrix(1,1.71259E-020,1.71259E-020,1,-1.4404,1.4396)" class="st1">
+								<path d="M0 512.18 L4.7 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.7 512.18" class="st18" />
+						</g>
+						<g id="shape547-1101" transform="translate(-508.801,512.324) rotate(-90.0165)">
+							<g id="shadow547-1102" transform="matrix(1,1.99053E-020,1.99053E-020,1,-1.44041,1.43959)" class="st1">
+								<path d="M0 512.18 L4.67 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.67 512.18" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="group548-1108" transform="translate(348.644,-66.952)">
+					<g id="group549-1109" transform="translate(513.877,500.885) rotate(90) scale(-1,1)" data-bind="click: clickValve.bind($data, -3), clickBubble: false">
+						<title>Выходной клапан</title>
+						<desc>C клапан выход</desc>
+						<g id="group551-1110">
+							<g id="group552-1111">
+								<g id="shape553-1112" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow553-1113" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[2].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape554-1117" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow554-1118" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[2].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape555-1122" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow555-1123" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape556-1129" transform="translate(2.36677,-9.79531)">
+								<g id="shadow556-1130" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape557-1136" transform="translate(2.36677,-9.79531)">
+								<g id="shadow557-1137" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group558-1143" transform="translate(8.60722,-25.174) scale(-1,1)">
+						<g id="shape559-1144">
+							<g id="shadow559-1145" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape560-1148" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow560-1149" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape561-1154" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow561-1155" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group562-1160">
+						<g id="shape563-1161" transform="translate(-504.082,505.145) rotate(-90)">
+							<g id="shadow563-1162" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st2" />
+							</g>
+							<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st20" />
+						</g>
+						<g id="shape564-1166" transform="translate(10.3442,1019.63) rotate(180)">
+							<g id="shadow564-1167" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st2" />
+							</g>
+							<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st20" />
+						</g>
+						<g id="shape565-1171" transform="translate(-502.323,507.531) rotate(-90)">
+							<g id="shadow565-1172" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st2" />
+							</g>
+							<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st20" />
+						</g>
+						<g id="shape566-1176" transform="translate(-504.864,512.319) rotate(-90.016)">
+							<g id="shadow566-1177" transform="matrix(1,1.71259E-020,1.71259E-020,1,-1.4404,1.4396)" class="st1">
+								<path d="M0 512.18 L4.7 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.7 512.18" class="st18" />
+						</g>
+						<g id="shape567-1183" transform="translate(-508.801,512.324) rotate(-90.0165)">
+							<g id="shadow567-1184" transform="matrix(1,1.99053E-020,1.99053E-020,1,-1.44041,1.43959)" class="st1">
+								<path d="M0 512.18 L4.67 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.67 512.18" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="group568-1190" transform="translate(482.847,-66.952)">
+					<g id="group569-1191" transform="translate(513.877,500.885) rotate(90) scale(-1,1)" data-bind="click: clickValve.bind($data, -4), clickBubble: false">
+						<title>Выходной клапан</title>
+						<desc>D клапан выход</desc>
+						<g id="group571-1192">
+							<g id="group572-1193">
+								<g id="shape573-1194" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow573-1195" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[3].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape574-1199" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow574-1200" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[3].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape575-1204" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow575-1205" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape576-1211" transform="translate(2.36677,-9.79531)">
+								<g id="shadow576-1212" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape577-1218" transform="translate(2.36677,-9.79531)">
+								<g id="shadow577-1219" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group578-1225" transform="translate(8.60722,-25.174) scale(-1,1)">
+						<g id="shape579-1226">
+							<g id="shadow579-1227" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape580-1230" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow580-1231" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape581-1236" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow581-1237" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group582-1242">
+						<g id="shape583-1243" transform="translate(-504.082,505.145) rotate(-90)">
+							<g id="shadow583-1244" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st2" />
+							</g>
+							<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st20" />
+						</g>
+						<g id="shape584-1248" transform="translate(10.3442,1019.63) rotate(180)">
+							<g id="shadow584-1249" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st2" />
+							</g>
+							<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st20" />
+						</g>
+						<g id="shape585-1253" transform="translate(-502.323,507.531) rotate(-90)">
+							<g id="shadow585-1254" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st2" />
+							</g>
+							<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st20" />
+						</g>
+						<g id="shape586-1258" transform="translate(-504.864,512.319) rotate(-90.016)">
+							<g id="shadow586-1259" transform="matrix(1,1.71259E-020,1.71259E-020,1,-1.4404,1.4396)" class="st1">
+								<path d="M0 512.18 L4.7 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.7 512.18" class="st18" />
+						</g>
+						<g id="shape587-1265" transform="translate(-508.801,512.324) rotate(-90.0165)">
+							<g id="shadow587-1266" transform="matrix(1,1.99053E-020,1.99053E-020,1,-1.44041,1.43959)" class="st1">
+								<path d="M0 512.18 L4.67 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.67 512.18" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="group588-1272" transform="translate(617.936,-66.952)">
+					<g id="group589-1273" transform="translate(513.877,500.885) rotate(90) scale(-1,1)" data-bind="click: clickValve.bind($data, -5), clickBubble: false">
+						<title>Выходной клапан</title>
+						<desc>E клапан выход</desc>
+						<g id="group591-1274">
+							<g id="group592-1275">
+								<g id="shape593-1276" transform="translate(-498.293,512.176) rotate(-90)">
+									<g id="shadow593-1277" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[4].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+								<g id="shape594-1281" transform="translate(512.176,505.264) rotate(90)">
+									<g id="shadow594-1282" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+										<path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" class="st2" />
+									</g>
+                                    <path d="M7.45 512.18 L3.46 505.26 L-0.53 512.18 L7.45 512.18 Z" data-bind="css: model.tanks[4].outValveOpened() ? 'st16' : 'st19'" />
+								</g>
+							</g>
+							<g id="shape595-1286" transform="translate(-505.206,508.72) rotate(-90)">
+								<g id="shadow595-1287" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L6.34 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L6.34 512.18" class="st18" />
+							</g>
+							<g id="shape596-1293" transform="translate(2.36677,-9.79531)">
+								<g id="shadow596-1294" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M0 512.18 L9.62 512.18" class="st17" />
+								</g>
+								<path d="M0 512.18 L9.62 512.18" class="st18" />
+							</g>
+							<g id="shape597-1300" transform="translate(2.36677,-9.79531)">
+								<g id="shadow597-1301" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+									<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st17" />
+								</g>
+								<path d="M-0 512.18 A19.3588 6.79948 91 0 1 9.62 512.18" class="st18" />
+							</g>
+						</g>
+					</g>
+					<g id="group598-1307" transform="translate(8.60722,-25.174) scale(-1,1)">
+						<g id="shape599-1308">
+							<g id="shadow599-1309" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st2" />
+							</g>
+							<rect x="0" y="483.83" width="6.90643" height="28.3465" class="st22" />
+						</g>
+						<g id="shape600-1312" transform="translate(514.138,483.83) rotate(90)">
+							<g id="shadow600-1313" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+						<g id="shape601-1318" transform="translate(517.246,483.83) rotate(90)">
+							<g id="shadow601-1319" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+								<path d="M0 512.18 L28.35 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L28.35 512.18" class="st18" />
+						</g>
+					</g>
+					<g id="group602-1324">
+						<g id="shape603-1325" transform="translate(-504.082,505.145) rotate(-90)">
+							<g id="shadow603-1326" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st2" />
+							</g>
+							<rect x="0" y="505.989" width="3.96952" height="6.1875" class="st20" />
+						</g>
+						<g id="shape604-1330" transform="translate(10.3442,1019.63) rotate(180)">
+							<g id="shadow604-1331" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+								<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st2" />
+							</g>
+							<rect x="0" y="507.453" width="10.3442" height="4.72309" class="st20" />
+						</g>
+						<g id="shape605-1335" transform="translate(-502.323,507.531) rotate(-90)">
+							<g id="shadow605-1336" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+								<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st2" />
+							</g>
+							<path d="M0.08 512.18 L2.39 510.42 L2.39 504.23 L0 502.58 L0.08 512.18 Z" class="st20" />
+						</g>
+						<g id="shape606-1340" transform="translate(-504.864,512.319) rotate(-90.016)">
+							<g id="shadow606-1341" transform="matrix(1,1.71259E-020,1.71259E-020,1,-1.4404,1.4396)" class="st1">
+								<path d="M0 512.18 L4.7 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.7 512.18" class="st18" />
+						</g>
+						<g id="shape607-1347" transform="translate(-508.801,512.324) rotate(-90.0165)">
+							<g id="shadow607-1348" transform="matrix(1,1.99053E-020,1.99053E-020,1,-1.44041,1.43959)" class="st1">
+								<path d="M0 512.18 L4.67 512.18" class="st17" />
+							</g>
+							<path d="M0 512.18 L4.67 512.18" class="st18" />
+						</g>
+					</g>
+				</g>
+				<g id="shape608-1354" transform="translate(597.357,480.995) rotate(90) scale(-1,1)" data-bind="visible: model.tanks[0].outValveOpened()">
+					<desc>A стрелка</desc>
+					<g id="shadow608-1355" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+						<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;									 523.51 L0 512.18 Z" class="st2" />
+					</g>
+					<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;								 523.51 L0 512.18 Z" class="st3" />
+                    <text x="-24" y="516" transform="scale(-1,1)" class="st23">CO<tspan dy="0.5em" class="st24">2</tspan></text>
+				</g>
+				<g id="shape609-1359" transform="translate(731.153,480.995) rotate(90) scale(-1,1)" data-bind="visible: model.tanks[1].outValveOpened()">
+					<desc>B стрелка</desc>
+					<g id="shadow609-1360" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+						<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;									 523.51 L0 512.18 Z" class="st2" />
+					</g>
+					<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;								 523.51 L0 512.18 Z" class="st3" />
+                    <text x="-24" y="516" transform="scale(-1,1)" class="st23">CO<tspan dy="0.5em" class="st24">2</tspan></text>
+				</g>
+				<g id="shape610-1364" transform="translate(866.082,480.995) rotate(90) scale(-1,1)" data-bind="visible: model.tanks[2].outValveOpened()">
+					<desc>C стрелка</desc>
+					<g id="shadow610-1365" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+						<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;									 523.51 L0 512.18 Z" class="st2" />
+					</g>
+					<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;								 523.51 L0 512.18 Z" class="st3" />
+                    <text x="-24" y="516" transform="scale(-1,1)" class="st23">CO<tspan dy="0.5em" class="st24">2</tspan></text>
+				</g>
+				<g id="shape611-1369" transform="translate(1000.44,480.995) rotate(90) scale(-1,1)" data-bind="visible: model.tanks[3].outValveOpened()">
+					<desc>D стрелка</desc>
+					<g id="shadow611-1370" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+						<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;									 523.51 L0 512.18 Z" class="st2" />
+					</g>
+					<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;								 523.51 L0 512.18 Z" class="st3" />
+                    <text x="-24" y="516" transform="scale(-1,1)" class="st23">CO<tspan dy="0.5em" class="st24">2</tspan></text>
+				</g>
+				<g id="shape612-1374" transform="translate(1135.37,480.995) rotate(90) scale(-1,1)" data-bind="visible: model.tanks[4].outValveOpened()">
+					<desc>E стрелка</desc>
+					<g id="shadow612-1375" transform="matrix(1,0,0,1,-1.44,-1.44)" class="st1">
+						<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;									 523.51 L0 512.18 Z" class="st2" />
+					</g>
+					<path d="M0 512.18 L11.34 500.84 L11.34 506.51 L34.02 506.51 L34.02 512.18 L34.02 517.85 L11.34 517.85 L11.34&#xD;&#xA;								 523.51 L0 512.18 Z" class="st3" />
+                    <text x="-24" y="516" transform="scale(-1,1)" class="st23">CO<tspan dy="0.5em" class="st24">2</tspan></text>
+				</g>
+			</g>
+
+		<g id="trendsArea" transform="translate(135,10)">
+			<g id="shape1-2" transform="translate(7.08661,0)">
+				<g id="shadow1-3" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="1.94" width="531" height="220" class="st2" />
+				</g>
+				<rect x="0" y="1.94" width="531" height="220" class="st25" />
+				<text x="180" y="17" class="st26">Тренды уровня CO<tspan dy="0.284em" class="st28">2</tspan><tspan dy="-0.142em"> в хранилищах</tspan></text>			
+			</g>
+			<g id="group37-9" transform="translate(3.59712E-014,-17.5118)">
+				<g id="shape3-10" transform="translate(-7.99361E-015,-170.079)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[10], attr: { x: trendLabelsY[10]() >= 100 ? '9.38' : trendLabelsY[10]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape15-13" transform="translate(249.971,39.2943) rotate(90)">
+					<g id="shadow15-14" transform="matrix(1,0,0,1,1.44,-1.44)" class="st1">
+						<path d="M0 217.37 L170.08 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L170.08 217.37" class="st18" />
+				</g>
+				<g id="shape16-21" transform="translate(22.6772,-178.079)">
+					<g id="shadow16-22" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+                </g>
+				<g id="shape17-28" transform="translate(-7.99361E-015,-153.071)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[9], attr: { x: trendLabelsY[9]() >= 100 ? '9.38' : trendLabelsY[9]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape18-31" transform="translate(22.6772,-161.071)">
+					<g id="shadow18-32" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape19-38" transform="translate(-7.99361E-015,-136.063)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[8], attr: { x: trendLabelsY[8]() >= 100 ? '9.38' : trendLabelsY[8]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape20-41" transform="translate(22.6772,-144.063)">
+					<g id="shadow20-42" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape21-48" transform="translate(-7.99361E-015,-119.055)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[7], attr: { x: trendLabelsY[7]() >= 100 ? '9.38' : trendLabelsY[7]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape22-51" transform="translate(22.6772,-127.055)">
+					<g id="shadow22-52" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape23-58" transform="translate(-7.99361E-015,-102.047)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[6], attr: { x: trendLabelsY[6]() >= 100 ? '9.38' : trendLabelsY[6]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape24-61" transform="translate(22.6772,-110.047)">
+					<g id="shadow24-62" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape25-68" transform="translate(-7.99361E-015,-85.0394)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[5], attr: { x: trendLabelsY[5]() >= 100 ? '9.38' : trendLabelsY[5]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape26-71" transform="translate(22.6772,-93.0394)">
+					<g id="shadow26-72" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape27-78" transform="translate(-7.99361E-015,-68.0315)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[4], attr: { x: trendLabelsY[4]() >= 100 ? '9.38' : trendLabelsY[4]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape28-81" transform="translate(22.6772,-76.0315)">
+					<g id="shadow28-82" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape29-88" transform="translate(-7.99361E-015,-51.0236)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[3], attr: { x: trendLabelsY[3]() >= 100 ? '9.38' : trendLabelsY[3]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape30-91" transform="translate(22.6772,-59.0236)">
+					<g id="shadow30-92" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape31-98" transform="translate(-7.99361E-015,-34.0157)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[2], attr: { x: trendLabelsY[2]() >= 100 ? '9.38' : trendLabelsY[2]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape32-101" transform="translate(22.6772,-42.0157)">
+					<g id="shadow32-102" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape33-108" transform="translate(-7.99361E-015,-17.0079)">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[1], attr: { x: trendLabelsY[1]() >= 100 ? '9.38' : trendLabelsY[1]() >= 10 ? '13.43' : '17.49' }"/>
+				</g>
+				<g id="shape34-111" transform="translate(22.6772,-25.0079)">
+					<g id="shadow34-112" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape35-118">
+					<text y="211.77" class="st42" data-bind="text: trendLabelsY[0], attr: { x: trendLabelsY[0]() >= 100 ? '9.38' : trendLabelsY[0]() >= 10 ? '13.43' : '17.49' }" />
+				</g>
+				<g id="shape36-121" transform="translate(22.6772,-8)">
+					<g id="shadow36-122" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+			</g>
+			<g id="group38-128" transform="translate(542.126,-17.5118) scale(-1,1)">
+				<g id="shape39-129" transform="translate(-7.99361E-015,-170.079)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[10]--><!--/ko--></text>				
+				</g>
+				<g id="shape40-132" transform="translate(249.971,39.2943) rotate(90)">
+					<g id="shadow40-133" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<path d="M0 217.37 L170.08 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L170.08 217.37" class="st18" />
+				</g>
+				<g id="shape41-139" transform="translate(22.6772,-178.079)">
+					<g id="shadow41-140" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape42-146" transform="translate(-7.99361E-015,-153.071)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[9]--><!--/ko--></text>				
+				</g>
+				<g id="shape43-149" transform="translate(22.6772,-161.071)">
+					<g id="shadow43-150" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape44-156" transform="translate(-7.99361E-015,-136.063)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[8]--><!--/ko--></text>				
+				</g>
+				<g id="shape45-159" transform="translate(22.6772,-144.063)">
+					<g id="shadow45-160" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape46-166" transform="translate(-7.99361E-015,-119.055)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[7]--><!--/ko--></text>				
+				</g>
+				<g id="shape47-169" transform="translate(22.6772,-127.055)">
+					<g id="shadow47-170" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape48-176" transform="translate(-7.99361E-015,-102.047)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[6]--><!--/ko--></text>				
+				</g>
+				<g id="shape49-179" transform="translate(22.6772,-110.047)">
+					<g id="shadow49-180" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape50-186" transform="translate(-7.99361E-015,-85.0394)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[5]--><!--/ko--></text>				
+				</g>
+				<g id="shape51-189" transform="translate(22.6772,-93.0394)">
+					<g id="shadow51-190" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape52-196" transform="translate(-7.99361E-015,-68.0315)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[4]--><!--/ko--></text>				
+				</g>
+				<g id="shape53-199" transform="translate(22.6772,-76.0315)">
+					<g id="shadow53-200" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape54-206" transform="translate(-7.99361E-015,-51.0236)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[3]--><!--/ko--></text>				
+				</g>
+				<g id="shape55-209" transform="translate(22.6772,-59.0236)">
+					<g id="shadow55-210" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape56-216" transform="translate(-7.99361E-015,-34.0157)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[2]--><!--/ko--></text>				
+				</g>
+				<g id="shape57-219" transform="translate(22.6772,-42.0157)">
+					<g id="shadow57-220" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape58-226" transform="translate(-7.99361E-015,-17.0079)">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[1]--><!--/ko--></text>				
+				</g>
+				<g id="shape59-229" transform="translate(22.6772,-25.0079)">
+					<g id="shadow59-230" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+				<g id="shape60-236">
+					<text x="-21.54" y="211.77" transform="scale(-1,1)" class="st42"><!--ko text: trendLabelsY[0]--><!--/ko--></text>				
+				</g>
+				<g id="shape61-239" transform="translate(22.6772,-8)">
+					<g id="shadow61-240" transform="matrix(1,0,0,1,-1.44,1.44)" class="st1">
+						<path d="M0 217.37 L9.92 217.37" class="st17" />
+					</g>
+					<path d="M0 217.37 L9.92 217.37" class="st18" />
+				</g>
+			</g>
+
+            <line x1="32.5" y1="191.9" x2="510" y2="191.9" class="st18" />
+
+            <line x1="32.6" y1="192" x2="32.6" y2="200" class="st18" />
+            <text x="17.6" y="208" class="st42" data-bind="text: trendLabelsX[0]" />
+            <line x1="67" y1="192" x2="67" y2="196" class="st18" />
+            <line x1="101" y1="192" x2="101" y2="200" class="st18" />
+            <text x="86" y="208" class="st42" data-bind="text: trendLabelsX[1]" />
+            <line x1="135" y1="192" x2="135" y2="196" class="st18" />
+            <line x1="169" y1="192" x2="169" y2="200" class="st18" />
+            <text x="154" y="208" class="st42" data-bind="text: trendLabelsX[2]" />
+            <line x1="203" y1="192" x2="203" y2="196" class="st18" />
+            <line x1="237" y1="192" x2="237" y2="200" class="st18" />
+            <text x="222" y="208" class="st42" data-bind="text: trendLabelsX[3]" />
+            <line x1="271" y1="192" x2="271" y2="196" class="st18" />
+            <line x1="305" y1="192" x2="305" y2="200" class="st18" />
+            <text x="290" y="208" class="st42" data-bind="text: trendLabelsX[4]" />
+            <line x1="339" y1="192" x2="339" y2="196" class="st18" />
+            <line x1="373" y1="192" x2="373" y2="200" class="st18" />
+            <text x="358" y="208" class="st42" data-bind="text: trendLabelsX[5]" />
+            <line x1="407" y1="192" x2="407" y2="196" class="st18" />
+            <line x1="441" y1="192" x2="441" y2="200" class="st18" />
+            <text x="426" y="208" class="st42" data-bind="text: trendLabelsX[6]" />
+            <line x1="475" y1="192" x2="475" y2="196" class="st18" />
+            <line x1="509.5" y1="192" x2="509.5" y2="200" class="st18" />
+            <text x="494" y="208" class="st42" data-bind="text: trendLabelsX[7]" />
+
+            <line x1="32.5" y1="21.8" x2="510" y2="21.8" class="st18" />
+            <!-- вертикальные пунктирные линии -->
+            <line x1="67" y1="21.8" x2="67" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="101" y1="21.8" x2="101" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="135" y1="21.8" x2="135" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="169" y1="21.8" x2="169" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="203" y1="21.8" x2="203" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="237" y1="21.8" x2="237" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="271" y1="21.8" x2="271" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="305" y1="21.8" x2="305" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="339" y1="21.8" x2="339" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="373" y1="21.8" x2="373" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="407" y1="21.8" x2="407" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="441" y1="21.8" x2="441" y2="192" class="st18" stroke-dasharray="2,5" />
+            <line x1="475" y1="21.8" x2="475" y2="192" class="st18" stroke-dasharray="2,5" />
+
+            <line x1="32.5" y1="38.8" x2="510" y2="38.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="55.8" x2="510" y2="55.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="72.8" x2="510" y2="72.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="89.8" x2="510" y2="89.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="106.8" x2="510" y2="106.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="123.8" x2="510" y2="123.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="140.8" x2="510" y2="140.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="157.8" x2="510" y2="157.8" class="st18" stroke-dasharray="2,5" />
+            <line x1="32.5" y1="174.8" x2="510" y2="174.8" class="st18" stroke-dasharray="2,5" />
+
+            <rect x="30" y="10" width="6" height="6" rx="2" ry="2" stroke="black" stroke-width="0.5"
+                  data-bind="attr: { fill: trendVisible[0]() ? '#ff0000' : '#e0e6cd' }, click: clickTrendLegend.bind($data, 0), clickBubble: false">
+            <title><span data-bind="text: trendVisible[0]() ? 'Выключить' : 'Включить'"></span> тренд</title>
+            </rect>
+			<text x="40" y="17" class="st26">A</text>
+            <rect x="50" y="10" width="6" height="6" rx="2" ry="2" stroke="black" stroke-width="0.5"
+                  data-bind="attr: { fill: trendVisible[1]() ? '#ffff00' : '#e0e6cd' }, click: clickTrendLegend.bind($data, 1), clickBubble: false">
+            <title><span data-bind="text: trendVisible[1]() ? 'Выключить' : 'Включить'"></span> тренд</title>
+            </rect>
+			<text x="60" y="17" class="st26">B</text>
+            <rect x="70" y="10" width="6" height="6" rx="2" ry="2" stroke="black" stroke-width="0.5"
+                  data-bind="attr: { fill: trendVisible[2]() ? '#00b050' : '#e0e6cd' }, click: clickTrendLegend.bind($data, 2), clickBubble: false">
+            <title><span data-bind="text: trendVisible[2]() ? 'Выключить' : 'Включить'"></span> тренд</title>
+            </rect>
+			<text x="80" y="17" class="st26">C</text>
+            <rect x="90" y="10" width="6" height="6" rx="2" ry="2" stroke="black" stroke-width="0.5"
+                  data-bind="attr: { fill: trendVisible[3]() ? '#00b0f0' : '#e0e6cd' }, click: clickTrendLegend.bind($data, 3), clickBubble: false">
+            <title><span data-bind="text: trendVisible[3]() ? 'Выключить' : 'Включить'"></span> тренд</title>
+            </rect>
+			<text x="100" y="17" class="st26">D</text>
+            <rect x="110" y="10" width="6" height="6" rx="2" ry="2" stroke="black" stroke-width="0.5"
+                  data-bind="attr: { fill: trendVisible[4]() ? '#7030a0' : '#e0e6cd' }, click: clickTrendLegend.bind($data, 4), clickBubble: false">
+            <title><span data-bind="text: trendVisible[4]() ? 'Выключить' : 'Включить'"></span> тренд</title>
+            </rect>
+			<text x="120" y="17" class="st26">E</text>
+
+            <!-- в виде таблицы -->
+            <g data-bind="click: clickTableView">
+            <title>В виде таблицы</title>
+            <rect x="520" y="7" width="10" height="10" fill="#e0e6cd" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" />
+            <line x1="520" y1="8" x2="530" y2="8" stroke="black" stroke-width="1.1" />
+            <line x1="520" y1="11" x2="530" y2="11" stroke="black" stroke-width="0.5" />
+            <line x1="520" y1="14" x2="530" y2="14" stroke="black" stroke-width="0.5" />
+            <line x1="523" y1="7" x2="523" y2="17" stroke="black" stroke-width="0.5" />
+            <line x1="527" y1="7" x2="527" y2="17" stroke="black" stroke-width="0.5" />
+	        </g>
+
+            <!-- начало отсчета -->
+            <g data-bind="click: clickStart">
+                <title>Начало отсчета</title>
+                <rect x="410" y="7" width="10" height="10" fill="#e0e6cd" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" />
+                <text y="14" fill="black" font-family="Calibri" font-size="8px" font-weight="bold" data-bind="text: trendScrollAuto() ? 'A' : 'M', attr: { x: trendScrollAuto() ? '412.5' : '411.5' }"></text>
+	        </g>
+
+            <!-- масштаб X -->
+            <g data-bind="click: clickTrendScaleXStep">
+                <title>Масштаб X</title>
+                <rect x="425" y="7" width="10" height="10" fill="#e0e6cd" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" />
+                <text x="426.5" y="13.5" fill="black" font-family="Calibri" font-size="5px" font-weight="bold">x<!--ko text: trendScaleX--><!--/ko--></text>
+		    </g>
+
+            <!-- масштаб Y -->
+		    <g data-bind="click: clickTrendScaleYStep">
+                <title>Масштаб Y</title>
+                <rect x="440" y="7" width="10" height="10" fill="#e0e6cd" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" />
+                <text y="13.5" fill="black" font-family="Calibri" font-size="5px" font-weight="bold" data-bind="attr: { x: trendScaleY() < 10 ? '442.5' : '441.5' }">y<!--ko text: trendScaleY--><!--/ko--></text>		
+		    </g>
+
+            <!-- стрелка влево -->
+	        <g data-bind="click: clickTrendLeft">
+                <title>Начало отсчета раньше</title>
+                <circle cx="460" cy="12" r="5" fill="#e0e6cd" stroke-width="1.1" data-bind="attr: { stroke: trendLeftEnable() ? 'black' : 'gray' }"/>
+                <line x1="458" y1="12" x2="461" y2="10" stroke-width="1.1" data-bind="attr: { stroke: trendLeftEnable() ? 'black' : 'gray' }"/>
+                <line x1="458" y1="12" x2="461" y2="14" stroke-width="1.1" data-bind="attr: { stroke: trendLeftEnable() ? 'black' : 'gray' }"/>
+	        </g>
+
+            <!-- стрелка вправо -->
+	        <g data-bind="click: clickTrendRight">
+                <title>Начало отсчета позднее</title>
+                <circle cx="475" cy="12" r="5" fill="#e0e6cd" stroke-width="1.1" data-bind="attr: { stroke: trendRightEnable() ? 'black' : 'gray' }"/>
+                <line x1="474" y1="10" x2="477" y2="12" stroke-width="1.1" data-bind="attr: { stroke: trendRightEnable() ? 'black' : 'gray' }"/>
+                <line x1="474" y1="14" x2="477" y2="12" stroke-width="1.1" data-bind="attr: { stroke: trendRightEnable() ? 'black' : 'gray' }"/>
+	        </g>
+
+            <!-- стрелка вверх -->
+	        <g data-bind="click: clickTrendUp">
+                <title>Уровень больше</title>
+                <!-- data-bind="attr: { x: trendScaleYNext() < 10 ? '442.5' : '441.5' } -->
+                <circle cx="490" cy="12" r="5" fill="#e0e6cd" stroke-width="1.1" data-bind="attr: { stroke: trendUpEnable() ? 'black' : 'gray' }"/>
+                <line x1="488" y1="14" x2="490" y2="10" stroke-width="1.1" data-bind="attr: { stroke: trendUpEnable() ? 'black' : 'gray' }"/>
+                <line x1="492" y1="14" x2="490" y2="10" stroke-width="1.1" data-bind="attr: { stroke: trendUpEnable() ? 'black' : 'gray' }"/>
+	        </g>
+
+            <!-- стрелка вниз -->
+	        <g data-bind="click: clickTrendDown">
+		        <title>Уровень меньше</title>
+                <circle cx="505" cy="12" r="5" fill="#e0e6cd" stroke-width="1.1" data-bind="attr: { stroke: trendDownEnable() ? 'black' : 'gray' }"/>
+                <line x1="503" y1="10" x2="505" y2="14" stroke-width="1.1" data-bind="attr: { stroke: trendDownEnable() ? 'black' : 'gray' }"/>
+                <line x1="507" y1="10" x2="505" y2="14" stroke-width="1.1" data-bind="attr: { stroke: trendDownEnable() ? 'black' : 'gray' }"/>
+	        </g>
+
+            <path stroke-width="2" stroke="#ff0000" data-bind="visible: trendVisible[0], attr: { d: trends[0] }" />
+            <path stroke-width="2" stroke="#ffff00" data-bind="visible: trendVisible[1], attr: { d: trends[1] }" />
+            <path stroke-width="2" stroke="#00b050" data-bind="visible: trendVisible[2], attr: { d: trends[2] }" />
+            <path stroke-width="2" stroke="#00b0f0" data-bind="visible: trendVisible[3], attr: { d: trends[3] }" />
+            <path stroke-width="2" stroke="#7030a0" data-bind="visible: trendVisible[4], attr: { d: trends[4] }" />
+
+		</g>
+			
+            <g id="shape616-1845" transform="translate(29.814,-479.24)">
+				<desc>Общие итоги:</desc>
+				<rect x="0" y="496.176" width="99.2126" height="16" class="st30" />
+				<text x="4" y="507.78" class="st26"><tspan class="st31">Общие</tspan><tspan class="st31"> </tspan><tspan class="st31">итоги</tspan><tspan class="st31">:</tspan></text>			</g>
+			<g id="group617-1852" transform="translate(9.97146,-436.169)">
+				<g id="shape618-1853">
+					<desc>Выработка с начала смены:</desc>
+					<g id="shadow618-1854" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<rect x="0" y="473.405" width="119.055" height="38.7717" class="st32" />
+					</g>
+					<rect x="0" y="473.405" width="119.055" height="38.7717" class="st33" />
+					<text x="4" y="490" class="st26">Выработка с начала <tspan x="4" dy="1.4em" class="st13">смены</tspan><tspan class="st34">:</tspan></text>				</g>
+				<g id="shape619-1861" transform="translate(66.1879,0)">
+					<desc>Выработка с начала смены</desc>
+					<rect x="0" y="496.176" width="52.8672" height="16" class="st35" />
+					<text x="4" y="507.78" class="st36" data-bind="text: model.startBalance().toFixed(2) + ' т'" />				</g>
+			</g>
+			<g id="group614-1864" transform="translate(9.97146,-384.689)">
+				<g id="shape620-1865">
+					<desc>Остаток в хранилищах:</desc>
+					<g id="shadow620-1866" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<rect x="0" y="473.405" width="119.055" height="38.7717" class="st32" />
+					</g>
+					<rect x="0" y="473.405" width="119.055" height="38.7717" class="st33" />
+					<text x="4" y="487.31" class="st37">Остаток в хранилищах:</text>				</g>
+				<g id="shape621-1871" transform="translate(66.1879,0)">
+					<desc>Остаток в хранилищах</desc>
+					<rect x="0" y="496.176" width="52.8672" height="16" class="st35" />
+                    <text x="4" y="507.78" class="st36" data-bind="text: model.allBalance().toFixed(2) + ' т'" />		</g>
+			</g>
+			<g id="group622-1874" transform="translate(9.97146,-333.209)">
+				<g id="shape623-1875">
+					<desc>Отгружено, всего:</desc>
+					<g id="shadow623-1876" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+						<rect x="0" y="473.405" width="119.055" height="38.7717" class="st32" />
+					</g>
+					<rect x="0" y="473.405" width="119.055" height="38.7717" class="st33" />
+					<text x="4" y="487.31" class="st37">Отгружено, всего:</text>				</g>
+				<g id="shape624-1881" transform="translate(66.1879,0)">
+					<desc>Отгружено, всего</desc>
+					<rect x="0" y="496.176" width="52.8672" height="16" class="st35" />
+					<text x="4" y="507.78" class="st36" data-bind="text: model.startOut().toFixed(2) + ' т'" />				</g>
+			</g>
+			<g id="shape625-1884" transform="translate(73.751,-265.634)" data-bind="click: clickAM.bind($data, -1), clickBubble: false">
+				<title>Переключатель автомат/ручной</title>
+				<desc>Общий клапан A/M</desc>
+				<g id="shadow625-1885" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st2" />
+				</g>
+				<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st3" />
+				<text x="4.06" y="508.09" class="st23" data-bind="text: model.commonValveAuto() ? 'A' : 'M'" />			</g>
+			<g id="shape626-1890" transform="translate(90.7589,-220.846)" data-bind="click: clickAM.bind($data, 0), clickBubble: false">
+				<title>Переключатель автомат/ручной</title>
+				<desc>A клапан вход A/M</desc>
+				<g id="shadow626-1891" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st2" />
+				</g>
+				<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st3" />
+				<text x="4.06" y="508.09" class="st23" data-bind="text: model.tanks[0].inValveAuto() ? 'A' : 'M'" />			</g>
+			<g id="shape627-1896" transform="translate(225.405,-220.846)" data-bind="click: clickAM.bind($data, 1), clickBubble: false">
+				<title>Переключатель автомат/ручной</title>
+				<desc>B клапан вход A/M</desc>
+				<g id="shadow627-1897" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st2" />
+				</g>
+				<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st3" />
+				<text x="4.06" y="508.09" class="st23" data-bind="text: model.tanks[1].inValveAuto() ? 'A' : 'M'" />			</g>
+			<g id="shape628-1902" transform="translate(360.05,-220.846)" data-bind="click: clickAM.bind($data, 2), clickBubble: false">
+				<title>Переключатель автомат/ручной</title>
+				<desc>C клапан вход A/M</desc>
+				<g id="shadow628-1903" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st2" />
+				</g>
+				<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st3" />
+				<text x="4.06" y="508.09" class="st23" data-bind="text: model.tanks[2].inValveAuto() ? 'A' : 'M'" />			</g>
+			<g id="shape629-1908" transform="translate(494.696,-220.846)" data-bind="click: clickAM.bind($data, 3), clickBubble: false">
+				<title>Переключатель автомат/ручной</title>
+				<desc>D клапан вход A/M</desc>
+				<g id="shadow629-1909" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st2" />
+				</g>
+				<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st3" />
+				<text x="4.06" y="508.09" class="st23" data-bind="text: model.tanks[3].inValveAuto() ? 'A' : 'M'" />			</g>
+			<g id="shape630-1914" transform="translate(629.342,-220.846)" data-bind="click: clickAM.bind($data, 4), clickBubble: false">
+				<title>Переключатель автомат/ручной</title>
+				<desc>E клапан вход A/M</desc>
+				<g id="shadow630-1915" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st2" />
+				</g>
+				<rect x="0" y="498.003" width="14.1732" height="14.1732" class="st3" />
+				<text x="4.06" y="508.09" class="st23" data-bind="text: model.tanks[4].inValveAuto() ? 'A' : 'M'" />			</g>
+			<g id="shape636-1920" transform="translate(45.4045,-77.1299)" data-bind="click: clickLastOut.bind($data, 0), clickBubble: false">
+				<title>Счетчик отгрузки</title>
+				<desc>A отгрузка</desc>
+				<g id="shadow636-1921" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st2" />
+				</g>
+				<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st38" />
+				<text x="4" y="506.07" class="st12" data-bind="text: model.tanks[0].lastOut().toFixed(2) + ' т'" />			</g>
+			<g id="shape637-1928" transform="translate(180.05,-77.1299)" data-bind="click: clickLastOut.bind($data, 1), clickBubble: false">
+				<title>Счетчик отгрузки</title>
+				<desc>B отгрузка</desc>
+				<g id="shadow637-1929" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st2" />
+				</g>
+				<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st38" />
+				<text x="4" y="506.07" class="st12" data-bind="text: model.tanks[1].lastOut().toFixed(2) + ' т'" />			</g>
+			<g id="shape638-1935" transform="translate(314.696,-77.1299)" data-bind="click: clickLastOut.bind($data, 2), clickBubble: false">
+				<title>Счетчик отгрузки</title>
+				<desc>C отгрузка</desc>
+				<g id="shadow638-1936" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st2" />
+				</g>
+				<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st38" />
+				<text x="4" y="506.07" class="st12" data-bind="text: model.tanks[2].lastOut().toFixed(2) + ' т'" />			</g>
+			<g id="shape639-1942" transform="translate(449.342,-77.1299)" data-bind="click: clickLastOut.bind($data, 3), clickBubble: false">
+				<title>Счетчик отгрузки</title>
+				<desc>D отгрузка</desc>
+				<g id="shadow639-1943" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st2" />
+				</g>
+				<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st38" />
+				<text x="4" y="506.07" class="st12" data-bind="text: model.tanks[3].lastOut().toFixed(2) + ' т'" />			</g>
+			<g id="shape640-1949" transform="translate(583.987,-77.1299)" data-bind="click: clickLastOut.bind($data, 4), clickBubble: false">
+				<title>Счетчик отгрузки</title>
+				<desc>E отгрузка</desc>
+				<g id="shadow640-1950" transform="matrix(1,0,0,1,1.44,1.44)" class="st1">
+					<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st2" />
+				</g>
+				<rect x="0" y="495.168" width="31.4646" height="17.0079" class="st38" />
+				<text x="4" y="506.07" class="st12" data-bind="text: model.tanks[4].lastOut().toFixed(2) + ' т'" />			</g>
+		</g>
+	</g>
+</svg>
+    </div>
+    
+    <script type="text/javascript">
+
+        // Формирует случайное вещественное число в диапазоне min..max
+        function getRandomArbitary(min, max) { 
+            return Math.random() * (max - min) + min; 
+        } 
+        
+        // Формирует случайное целое число в диапазоне min..max
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; 
+        } 
+
+        // Формирует случайное булево значение
+        function getRandomBool() {
+            return Math.random() < 0.5;
+        }
+
+        // Расширение функциональности объекта Number:
+        // Добавляет лидирующие нули
+        // Источник: http://stackoverflow.com/questions/2998784/how-to-output-integers-with-leading-zeros-in-javascript
+        Number.prototype.pad = function (size) {
+            var s = String(this);
+            while (s.length < (size || 2)) {
+                s = "0" + s;
+            }
+            return s;
+        }
+
+        // Получает тотальное количество секунд
+        Date.prototype.getTotalSeconds = function () {
+            return this.getHours() * 3600 + this.getMinutes() * 60 + this.getSeconds() * 1;
+        }
+
+        // Клонирует объект даты/времени
+        Date.prototype.clone = function () {
+            return new Date(this.getTime());
+        }
+
+        // Добавление секунд
+        Date.prototype.addSeconds = function (seconds) {
+            this.setSeconds(this.getSeconds() + seconds);
+        }
+
+        // Модель установки ЖУК:
+        // - 5 хранилищ по 110 тн, диапазон допустимых значений = 5..105 тн
+        // количество хранилищ
+        var tankCount = 5;
+        // диапазон допустимых значений в хранилищах, тн
+        var tankEL = 5.0;   // сверхнизкий уровень - блокировка
+        var tankL = 10.0;   // низкий уровень - сигнализация
+        var tankH = 100.0;  // высокий уровень - сигнализация
+        var tankEH = 105.0; // сверхвысокий уровень - блокировка
+        // полный объем хранилища, тн
+        var tankFull = 110.0;
+        // средняя производительность, тн/мин
+        var productivity = 0.23;
+        // средний расход при отгрузке (сливе), тн/мин
+        var outgo = 0.31;
+
+        // имитация девиаций выработки углекислоты
+        function getProductivity() {
+            return productivity + getRandomArbitary(-productivity / 5, productivity / 5);
+        }
+
+        // Хранилище
+        var Tank = function (balance, lastOut, inValveAuto, inValveOpened, outValveOpened) {
+            var self = this;
+
+            // остаток, тн
+            self.balance = ko.observable(balance);
+
+            // остаток, %
+            self.balancePercent = ko.computed(function () {
+                return ((self.balance() / tankFull) * 100).toFixed(2);
+            });
+
+            // последняя отгрузка, тн
+            self.lastOut = ko.observable(lastOut);
+
+            // входной клапан на автомате - true/false
+            self.inValveAuto = ko.observable(inValveAuto);
+
+            // входной клапан открыт - true/false
+            self.inValveOpened = ko.observable(self.inValveAuto() ? self.balance() < tankEH : self.balance() < tankEH && inValveOpened);
+
+            // выходной клапан открыт - true/false
+            self.outValveOpened = ko.observable(outValveOpened && self.balance() > tankEL);
+
+            // проверка - можно ли открыть закрытый входной клапан 
+            self.canInValveOpen = function () {
+                return self.balance() < tankEH;
+            }
+
+            // проверка - можно ли открыть закрытый выходной клапан 
+            self.canOutValveOpen = function () {
+                return self.balance() > tankEL;
+            }
+        }
+
+        // История (по всем хранилищам)
+        // Ограничивается сутками, т.е. в 00:00:00 история обнуляется
+        var History = function () {
+            var self = this;
+
+            self.items = new Array();
+
+            self.newItem = function (dateTime) {
+                if (dateTime.getHours() == 0 && dateTime.getMinutes() == 0 && dateTime.getSeconds() == 0) {
+                    self.items = new Array();
+                }
+                self.items.push({ id: self.items.length + 1, time: new Date(1970, 1, 1, dateTime.getHours(), dateTime.getMinutes(), dateTime.getSeconds()) });
+            }
+
+            self.add = function (tankIndex, tankBalance) {
+                self.items[self.items.length - 1][String.fromCharCode(65 + tankIndex)] = tankBalance;
+            }
+        }
+
+        // ЖУК
+        var Model = function () {
+            var self = this;
+
+            // хранилища
+            self.tanks = new Array(tankCount);
+            for (var i = 0; i < self.tanks.length; i++) {
+                self.tanks[i] = new Tank(
+                    // balance
+                    getRandomArbitary(tankEL, tankEH),
+                    // lastOut
+                    getRandomArbitary(tankEL, tankEH / 7),
+                    // inValveAuto
+                    getRandomBool(),
+                    // inValveOpened
+                    getRandomBool(),
+                    // outValveOpened
+                    getRandomBool());
+            }
+
+            // история
+            self.history = new History();
+
+            // Выработка с начала смены
+            self.startBalance = ko.observable(tankCount * getRandomArbitary(tankEL, tankEH));
+
+            // Отгружено с начала смены, всего
+            self.startOut = ko.observable(tankCount * getRandomArbitary(tankEL, tankEH / 7));
+
+            // общий клапан подачи открыт - true/false
+            self.commonValveOpened = ko.observable(true);
+
+            // общий клапан подачи на автомате - true/false
+            self.commonValveAuto = ko.observable(true);
+
+            // общий остаток
+            self.allBalance = ko.computed(function () {
+                var result = 0.0;
+                for (var i = 0; i < self.tanks.length; i++) {
+                    result += self.tanks[i].balance();
+                }
+                return result;
+            });
+
+            // закрывает общий клапан, если во всех хранилищах достигнут максимальный уровень 
+            // и открывает его в обратном случае, если клапан в автомате
+            self.checkCommonValve = function () {
+                if (!self.canCommonValveOpen()) {
+                    self.commonValveOpened(false);
+                }
+                else if (self.commonValveAuto()) {
+                    self.commonValveOpened(true);
+                }
+            };
+
+            // проверка - можно ли открыть закрытый общий клапан 
+            self.canCommonValveOpen = function () {
+                // можно открыть только если открыт хотя бы один входной клапан хранилищ
+                for (var i = 0; i < self.tanks.length; i++) {
+                    if (self.tanks[i].inValveOpened()) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            // чтение данных
+            // очередной шаг в работе имитатора = 1 мин
+            self.readData = function () {
+
+                // определяем сколько временнЫх точек нужно добавить
+                var currentDT = new Date();
+                currentDT.setMilliseconds(0);
+                var dateTime = currentDT.clone();
+                if (self.history.items.length > 0) {
+                    var dt = self.history.items[self.history.items.length - 1].time;
+                    dateTime = new Date(currentDT.getFullYear(), currentDT.getMonth(), currentDT.getDate(), dt.getHours(), dt.getMinutes(), dt.getSeconds() + 1);
+                }
+                while (dateTime <= currentDT) {
+                    // сливаем
+                    for (var i = 0; i < self.tanks.length; i++) {
+                        var tank = self.tanks[i];
+                        if (tank.outValveOpened()) {
+                            var toOut = outgo;
+                            var tankBalance = tank.balance();
+                            if (tankBalance - toOut < tankEL) {
+                                toOut = tankBalance - tankEL;
+                                tank.outValveOpened(false);
+                            }
+                            tank.balance(tankBalance - toOut);
+                            tank.lastOut(tank.lastOut() + toOut);
+                            self.startOut(self.startOut() + toOut);
+
+                            // если входной клапан в автомате, открываем его
+                            if (tank.inValveAuto()) {
+                                tank.inValveOpened(true);
+                            }
+                        }
+                    }
+
+                    // проверяем состояние общего клапана
+                    self.checkCommonValve();
+
+                    // наливаем
+                    var currentProductivity = getProductivity();
+                    var pourInAll = currentProductivity;
+                    while (pourInAll > currentProductivity / 50 && self.commonValveOpened()) {
+                        // считаем количество открытых хранилищ
+                        var openCount = 0;
+                        for (var i = self.tanks.length - 1; i >= 0; i--) {
+                            if (self.tanks[i].inValveOpened()) {
+                                openCount++;
+                            }
+                        }
+
+                        if (openCount > 0) {
+                            // заполняем открытые хранилища
+                            var pourInAllTmp = pourInAll;
+                            for (var i = 0; i < self.tanks.length; i++) {
+                                if (self.tanks[i].inValveOpened()) {
+                                    var tank = self.tanks[i];
+                                    var tankBalance = tank.balance();
+                                    var pourIn = pourInAllTmp / openCount;
+                                    if (tankBalance + pourIn >= tankEH) {
+                                        pourIn = tankEH - tankBalance;
+                                        tank.inValveOpened(false);
+                                        // проверяем состояние общего клапана
+                                        self.checkCommonValve();
+                                    }
+                                    tank.balance(tankBalance + pourIn);
+                                    self.startBalance(self.startBalance() + pourIn);
+                                    pourInAll -= pourIn;
+                                }
+                            }
+                        }
+                    }
+
+                    // заполняем историю
+                    self.history.newItem(dateTime);
+                    for (var i = 0; i < self.tanks.length; i++) {
+                        self.history.add(i, self.tanks[i].balance());
+                    }
+
+                    // переходим к следующей временнОй метке
+                    dateTime.addSeconds(1);
+                }
+
+                // проверяем состояние общего клапана
+                self.checkCommonValve();
+            };
+
+            // проверяем состояние общего клапана
+            self.checkCommonValve();
+        };
+
+        // Модель предсталения
+        function ViewModel() {
+            var self = this;
+
+            // ЖУК
+            self.model = new Model();
+
+            // тренды
+            self.trends = new Array(tankCount);
+            for (var i = 0; i < self.trends.length; i++) {
+                self.trends[i] = ko.observable("");
+            }
+
+            // видимость трендов
+            self.trendVisible = new Array(tankCount);
+            for (var i = 0; i < self.trends.length; i++) {
+                self.trendVisible[i] = ko.observable(true);
+            }
+
+            // временные метки трендов (ось X)
+            self.trendLabelsX = new Array(8);
+            for (var i = 0; i < self.trendLabelsX.length; i++) {
+                self.trendLabelsX[i] = ko.observable("");
+            }
+
+            // временные метки трендов (ось Y)
+            self.trendLabelsY = new Array(11);
+            for (var i = 0; i < self.trendLabelsY.length; i++) {
+                self.trendLabelsY[i] = ko.observable(10 * i + 5);
+            }
+
+            // масштаб временной оси трендов, сек между метками оси
+            self.trendScaleX = ko.observable(10);
+
+            // масштаб уровневой оси трендов, т между метками оси
+            self.trendScaleY = ko.observable(10);
+
+            // начало временной оси трендов
+            self.trendStartX = null;
+
+            // начало уровневой оси трендов
+            self.trendStartY = 5;
+
+            // доступность стрелки влево
+            self.trendLeftEnable = ko.observable(false);
+
+            // доступность стрелки вправо
+            self.trendRightEnable = ko.observable(false);
+
+            // доступность стрелки вверх
+            self.trendUpEnable = ko.observable(false);
+
+            // доступность стрелки вниз
+            self.trendDownEnable = ko.observable(false);
+
+            // автосмещение шкалы времени
+            // true - при запуске и при явном включении
+            // false - при просмотре архивных данных
+            self.trendScrollAuto = ko.observable(true);
+
+            // видимость представления в виде таблицы
+            self.tableViewVisible = ko.observable(false);
+
+            // клик кнопки представления в виде таблицы
+            self.clickTableView = function () {
+                self.tableViewVisible(true);
+            }
+
+            // клик на кнопке увеличения масштаба X
+            // установка нового значения масштаба временной оси трендов
+            // 10 - 30 - 60 - 10 - ...
+            self.clickTrendScaleXStep = function () {
+                var trendScaleX = self.trendScaleX();
+                if (trendScaleX == 10) trendScaleX = 30;
+                else if (trendScaleX == 30) trendScaleX = 60;
+                else if (trendScaleX == 60) trendScaleX = 10;
+                self.trendScaleX(trendScaleX);
+
+                self.drawTrends();
+            }
+
+            // клик на кнопке увеличения масштаба Y
+            // установка нового значения масштаба уровневой оси трендов
+            // 1 - 5 - 10 - 1 - ...
+            self.clickTrendScaleYStep = function () {
+                var trendScaleY = self.trendScaleY();
+                if (trendScaleY == 1) trendScaleY = 5;
+                else if (trendScaleY == 5) trendScaleY = 10;
+                else if (trendScaleY == 10) trendScaleY = 1;
+                self.trendScaleY(trendScaleY);
+                self.drawTrends();
+            }
+
+            // клик на кнопке настройки старта трендов
+            self.clickStart = function () {
+
+                if (self.trendStartX == null) return;
+                var startDate = self.model.history.items[0].time;
+                var startTrendTotalSeconds = startDate.getTotalSeconds();
+                var startTrendStr = "" + startDate.getHours().pad(2) + ":" + startDate.getMinutes().pad(2) + ":" + startDate.getSeconds().pad(2);
+                while (true) {
+                    var startTime = prompt("Введите время начала трендов (ЧЧ[:ММ[:СС]])\nили оставьте пустое значение для автонастройки:",
+                        "" + startDate.getHours().pad(2) + ":" + startDate.getMinutes().pad(2) + ":" + startDate.getSeconds().pad(2));
+                    if (startTime == null) {
+                        return;
+                    } else if (startTime == "") {
+                        if (!self.trendScrollAuto()) {
+                            self.trendScrollAuto(true);
+                            self.trendStartX = null;
+                            self.drawTrends();
+                        }
+                        return;
+                    }
+                    else {
+                        startDate = new Date("1/1/1970 " + startTime);
+                        var startDateTotalSeconds = startDate.getTotalSeconds();
+                        var now = new Date();
+                        var nowTotalSeconds = now.getTotalSeconds();
+                        if (startDateTotalSeconds < startTrendTotalSeconds) {
+                            alert("Ошибка: начало трендов должно быть не раньше " + startTrendStr + ".")
+                        } else if (startDateTotalSeconds > nowTotalSeconds) {
+                            alert("Ошибка: начало трендов должно быть прошедшим или текущим временем.")
+                        } else {
+                            self.trendScrollAuto(false);
+                            self.trendStartX = startDate;
+                            self.drawTrends();
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // клик на кнопке влево
+            self.clickTrendLeft = function () {
+                if (self.trendLeftEnable() && self.trendStartX != null) {
+                    self.trendStartX.addSeconds(-self.trendScaleX());
+                    var dt0 = self.model.history.items[0].time;
+                    if (self.trendStartX < dt0) self.trendStartX = dt0.clone();
+                    self.drawTrends();
+                }
+            }
+
+            // клик на кнопке вправо
+            self.clickTrendRight = function () {
+                if (self.trendRightEnable() && self.trendStartX != null) {
+                    self.trendStartX.addSeconds(self.trendScaleX());
+                    self.drawTrends();
+                }
+            }
+
+            // клик на кнопке ввеох
+            self.clickTrendUp = function () {
+                if (self.trendUpEnable()) {
+                    self.trendStartY += self.trendScaleY();
+                    self.drawTrends();
+                }
+            }
+
+            // клик на кнопке вниз
+            self.clickTrendDown = function () {
+                if (self.trendDownEnable()) {
+                    self.trendStartY -= self.trendScaleY();
+                    self.drawTrends();
+                }
+            }
+
+            // клик на легенде тренда
+            self.clickTrendLegend = function (index) {
+                self.trendVisible[index](!self.trendVisible[index]());
+            }
+
+            // отрисовка трендов
+            self.drawTrends = function () {
+
+                // заполнение таблицы архивных данных
+                var records = self.trendGrid.jqGrid('getGridParam', 'records');
+                while (records < self.model.history.items.length) {
+                    var data = self.model.history.items[records];
+                    self.trendGrid.jqGrid('addRowData', records, data);
+                    records++;
+                }
+                self.trendGrid.trigger("reloadGrid");
+
+                // отрисовка меток оси Y
+                self.drawTrendLabelsY();
+
+                // отрисовка временных меток трендов
+                var dt0 = new Date();
+                var dtNowSec = new Date(1970, 1, 1, dt0.getHours(), dt0.getMinutes(), dt0.getSeconds());
+                if (self.trendStartX == null) {
+                    self.trendStartX = dtNowSec;
+                } else if (self.trendScrollAuto()) {
+                    // определим, нужно ли смещать начало временной шкалы 
+                    var dt = dtNowSec.clone();
+                    dt.addSeconds(-7 * self.trendScaleX());
+                    if (dt > self.trendStartX) {
+                        self.trendStartX = dt.clone();
+                    }
+                }
+                self.drawTrendLabelsX();
+
+                // найти элемент истории, начиная с которого будут отображаться тренды
+                var startDateTotalSeconds = self.trendStartX.getTotalSeconds();
+                var index = -1;
+                for (var i = self.model.history.items.length - 1; i >= 0; i--) {
+                    if (self.model.history.items[i].time.getTotalSeconds() <= startDateTotalSeconds) {
+                        index = i;
+                        break;
+                    }
+                }
+
+                if (index < 0) {
+                    return;
+                }
+
+                // прямоугольник для отрисовки трендов - из разметки
+                var
+                    x1 = 33.5, x2 = 508.5,
+                    y1 = 21.8, y2 = 192,
+                    yMin = self.trendStartY,
+                    yMax = self.trendStartY + (self.trendLabelsY.length - 1) * self.trendScaleY(),
+                    // количество секунд на шкале X
+                    xPoints = 7 * self.trendScaleX(),
+                    // пикселов на секунду на шкале X
+                    xPixelsPerSecond = (x2 - x1) / xPoints,
+                    // индекс последнего отображаемого элемента истории
+                    lastIndex = index + xPoints;
+
+                if (lastIndex >= self.model.history.items.length) lastIndex = self.model.history.items.length - 1;
+
+                for (var i = 0; i < self.trends.length; i++) {
+                    var path = "";
+                    var visible = false;
+                    for (var j = index; j <= lastIndex; j++) {
+                        var x = x1 + xPixelsPerSecond * (j - index);
+                        var value = self.model.history.items[j][String.fromCharCode(65 + i)];
+
+                        if (value >= tankEH && self.trendLabelsY[self.trendLabelsY.length - 1]() == tankEH) {
+                            visible = true;
+                            path += (path == "" ? "M" : "L") + x.toFixed(4) + "," + y1;
+                        } else if (value <= tankEL && self.trendLabelsY[0]() == tankEL) {
+                            visible = true;
+                            path += (path == "" ? "M" : "L") + x.toFixed(4) + "," + y2;
+                        } else {
+                            var y = (value - yMin) / (yMax - yMin) * (y1 - y2) + y2;
+                            if (!(y1 < y && y < y2)) 
+                                visible = false;
+                            else {
+                                if (!visible) 
+                                    path += "M" + x.toFixed(4) + "," + y.toFixed(4);
+                                else
+                                    path += "L" + x.toFixed(4) + "," + y.toFixed(4);
+                                visible = true;
+                            }
+                        }
+                    }
+                    self.trends[i](path);
+                }
+            }
+
+            // отрисовка меток оси X
+            self.drawTrendLabelsX = function () {
+                var time = self.trendStartX.clone();
+                for (var i = 0; i < self.trendLabelsX.length; i++) {
+                    self.trendLabelsX[i]("" + time.getHours().pad(2) + ":" + time.getMinutes().pad(2) + ':' + time.getSeconds().pad(2));
+                    time.addSeconds(self.trendScaleX());
+                }
+
+                if (self.trendScrollAuto()) {
+                    self.trendLeftEnable(false);
+                    self.trendRightEnable(false);
+                } else {
+                    var startDateTotalSeconds = self.trendStartX.getTotalSeconds();
+                    var now = new Date();
+                    var nowTotalSeconds = now.getTotalSeconds();
+
+                    self.trendLeftEnable(self.model.history.items[0].time.getTotalSeconds() < startDateTotalSeconds);
+                    self.trendRightEnable(startDateTotalSeconds < nowTotalSeconds);
+                }
+            }
+
+            // отрисовка меток оси Y
+            self.drawTrendLabelsY = function () {
+                if (self.trendStartY < tankEL) {
+                    self.trendStartY = tankEL;
+                }
+                else {
+                    var yLength = (self.trendLabelsY.length - 1) * self.trendScaleY();
+                    if (self.trendStartY + yLength >= tankEH) {
+                        self.trendStartY = tankEH - yLength;
+                    }
+                }
+
+                var y = self.trendStartY;
+                for (var i = 0; i < self.trendLabelsY.length; i++) {
+                    self.trendLabelsY[i](y);
+                    y += self.trendScaleY();
+                }
+
+                self.trendDownEnable(self.trendLabelsY[0]() > tankEL);
+                self.trendUpEnable(self.trendLabelsY[self.trendLabelsY.length - 1]() < tankEH);
+            }
+
+            // обработка клика на клапане
+            // параметры:
+            // - valveNum - номер клапана:
+            //              == 0 - общий клапан
+            //              > 0 - входной клапан хранилища с индексом valveNum - 1
+            //              < 0 - выходной клапан хранилища с индексом valveNum - 1
+            self.clickValve = function (valveNum) {
+
+                var tank = valveNum == 0 ? null : self.model.tanks[Math.abs(valveNum) - 1];
+
+                var valveOpened =
+                    valveNum == 0 ? self.model.commonValveOpened() :
+                    valveNum < 0 ? tank.outValveOpened() : tank.inValveOpened();
+
+                // проверить, можно ли открыть/закрыть клапан
+                if (valveNum == 0) {
+                    // общий клапан управляется пользователем только в ручном режиме
+                    if (self.model.commonValveAuto() || (!valveOpened && !self.model.canCommonValveOpen())) {
+                        return;
+                    }
+                }
+                else if (valveNum > 0) {
+                    if (tank.inValveAuto() || (!valveOpened &&!tank.canInValveOpen())) {
+                        return;
+                    }
+                }
+                else {
+                    if (!valveOpened && !tank.canOutValveOpen()) {
+                        return;
+                    }
+                }
+
+                var msg = (valveOpened ? "Закрыть" : "Открыть") + " клапан?";
+                if (confirm(msg)) {
+                    if (valveNum == 0) {
+                        self.model.commonValveOpened(!valveOpened);
+                    }
+                    else if (valveNum < 0) {
+                        tank.outValveOpened(!valveOpened);
+                    }
+                    else {
+                        tank.inValveOpened(!valveOpened);
+                        self.model.checkCommonValve();
+                    }
+                }
+            };
+
+            // обработка клика на перелючателе "автомат/ручной"
+            self.clickAM = function (inValveIndex) {
+                var isAuto = inValveIndex < 0 ? self.model.commonValveAuto() : self.model.tanks[inValveIndex].inValveAuto();
+                if (confirm("Переключить клапан в " + (isAuto ? "ручной" : "автоматический") + " режим?")) {
+                    isAuto = !isAuto;
+                    if (inValveIndex < 0)
+                        self.model.commonValveAuto(isAuto);
+                    else {
+                        var tank = self.model.tanks[inValveIndex];
+                        tank.inValveAuto(isAuto);
+                        if (isAuto && tank.canInValveOpen()) {
+                            tank.inValveOpened(true);
+                            // проверяем состояние общего клапана
+                            self.model.checkCommonValve();
+                        }
+                    }
+                }
+            }
+
+            // обработка клика на счетчике отгрузки
+            self.clickLastOut = function (outValveIndex) {
+                if (confirm("Обнулить счетчик отгрузки?")) {
+                    self.model.tanks[outValveIndex].lastOut(0);
+                }
+            }
+
+            // выбирает стиль отображения уровня хранилища
+            self.getBalanceCSS = function (tankIndex) {
+                var balance = self.model.tanks[tankIndex].balance();
+                if (balance <= tankEL || balance >= tankEH)
+                    return "st11";
+                else if (balance <= tankL || balance >= tankH)
+                    return "st15";
+                else
+                    return "st12";
+            }
+
+            // делает невидимой таблицу архивных данных
+            self.tableViewHide = function (gridstate) {
+                self.tableViewVisible(false);
+                self.trendGrid.setGridState('visible');
+            }
+
+            // таблица архивных данных
+            self.trendGrid = $("#tableViewGrid").jqGrid({
+                data: self.model.history.items,
+                datatype: "local",
+                height: 212,
+                rowNum: 10,
+                rowList: [],
+                colNames: ['Время', 'A, тонн', 'A, %', 'B, тонн', 'B, %', 'C, тонн', 'C, %', 'D, тонн', 'D, %', 'E, тонн', 'E, %', 'Всего, тонн', 'Всего, %'],
+                colModel: [
+                    {
+                        name: 'time', index: 'time', width: 56, align: "center", sortable: false, editable: false, formatter: 'date',
+                        formatoptions: { srcformat: 'ISO8601Long', newformat: 'LongTime' }
+                    },
+                    {
+                        name: 'A', index: 'A', width: 50, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return cellvalue.toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'A', index: 'A', width: 40, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (100 * cellvalue / tankFull).toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'B', index: 'B', width: 50, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return cellvalue.toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'B', index: 'B', width: 40, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (100 * cellvalue / tankFull).toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'C', index: 'C', width: 50, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return cellvalue.toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'C', index: 'C', width: 40, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (100 * cellvalue / tankFull).toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'D', index: 'D', width: 50, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return cellvalue.toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'D', index: 'D', width: 40, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (100 * cellvalue / tankFull).toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'E', index: 'E', width: 50, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return cellvalue.toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'E', index: 'E', width: 40, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (100 * cellvalue / tankFull).toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'id', index: 'id', width: 72, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (rowObject['A'] + rowObject['B'] + rowObject['C'] + rowObject['D'] + rowObject['E']).toFixed(2);
+                        }
+                    },
+                    {
+                        name: 'id', index: 'id', width: 60, align: "center", sortable: false, editable: false,
+                        formatter: function (cellvalue, options, rowObject) {
+                            return (100 * (rowObject['A'] + rowObject['B'] + rowObject['C'] + rowObject['D'] + rowObject['E']) / (5 * tankFull)).toFixed(2);
+                        }
+                    },
+                ],
+                pagination: true,
+                pager: "#tableViewPager",
+                pagerpos: "left",
+                viewrecords: true,
+                gridview: true,
+                caption: "Архивные данные: уровень в хранилищах",
+                onHeaderClick: self.tableViewHide
+            });
+
+            self.doStep = function () {
+                // чтение данных
+                self.model.readData();
+                // отрисовка трендов
+                self.drawTrends();
+            }
+
+            // запуск циклической работы имитатора - 1 раз в секунду
+            var timer = setInterval(function () {
+                self.doStep();
+            }, 1000);
+        }
+
+        // представление
+        var viewModel = new ViewModel();
+
+        // биндинг
+        ko.applyBindings(viewModel, document.body);
+
+    </script>
+
+</body>
+</html>
